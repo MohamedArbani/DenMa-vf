@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.denma.NouveauTypeRadio">
+   <children>
+      <TextField layoutX="268.0" layoutY="73.0" prefHeight="25.0" prefWidth="247.0" />
+      <TextArea layoutX="268.0" layoutY="135.0" prefHeight="200.0" prefWidth="247.0" />
+      <Label layoutX="89.0" layoutY="143.0" text="Description" />
+      <Label layoutX="76.0" layoutY="77.0" text="ID type de radio" />
+      <Label layoutX="188.0" layoutY="21.0" text="Ajouter un nouveau type de radios:" />
+   </children>
+</AnchorPane>

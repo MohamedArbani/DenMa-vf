@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Polyline?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="parent" prefHeight="500.0" prefWidth="787.0" style="-fx-background-color: #273044;" styleClass="parent" stylesheets="@../../../Style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.denma.controllers.LoginController">
+   <center>
+      <AnchorPane fx:id="desktop" style="-fx-background-color: #1BBDE6; -fx-background-radius: 30px;" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="anchorPanel" layoutX="-419.0" prefHeight="502.0" prefWidth="418.0" style="-fx-background-color: #1BBDE6; -fx-background-radius: 30px 0 0 30px;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-419.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Circle fill="#0fc7e7" layoutX="27.0" layoutY="475.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Polyline fill="#0fc7e7" layoutX="74.0" layoutY="272.0" points="-72.00001525878906, 33.199981689453125, 52.79997253417969, 229.60000610351562, -44.79999923706055, 229.60000610351562, -72.00001525878906, 199.99996948242188" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Polyline fill="#0fc7e7" layoutX="64.0" layoutY="283.0" points="354.0, -159.39999389648438, 354.0, 100.60000610351562, 62.79997253417969, 218.60000610351562, -64.00001525878906, 23.800018310546875" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Circle fill="#1bbde6" layoutY="16.0" radius="146.0" strokeType="INSIDE" strokeWidth="55.0" style="-fx-fill: transparent;">
+                     <stroke>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.2862745225429535" green="0.7333333492279053" blue="0.95686274766922" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.2663062743707906">
+                                 <color>
+                                    <Color red="0.9100000262260437" green="0.9732328057289124" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.364705890417099" green="0.7803921699523926" blue="0.9450980424880981" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </stroke>
+                  </Circle>
+                  <Circle fill="#1bbde6" layoutX="7.0" layoutY="29.0" radius="100.0" strokeType="INSIDE" style="-fx-fill: Transparent;">
+                     <stroke>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.23999999463558197" green="1.0" blue="0.9508620500564575" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.2734254992319508">
+                                 <color>
+                                    <Color red="0.23999999463558197" green="1.0" blue="0.9508620500564575" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.846390168970814">
+                                 <color>
+                                    <Color red="0.9037036895751953" green="0.9261728525161743" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.9037036895751953" green="0.9261728525161743" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </stroke>
+                  </Circle>
+                  <ImageView fx:id="CloseBtn" accessibleHelp="Shutdown" fitHeight="37.0" fitWidth="46.0" layoutX="21.0" layoutY="438.0" onMouseClicked="#CloseClicked" opacity="0.65" pickOnBounds="true" preserveRatio="true" styleClass="icns">
+                     <image>
+                        <Image url="@../../../Icones/icons8_shutdown_60px.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Circle fill="#1bbde6" layoutX="20.0" layoutY="31.0" radius="137.0" strokeType="INSIDE" style="-fx-fill: Transparent;">
+                     <stroke>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.23999999463558197" green="1.0" blue="0.9508620500564575" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.2734254992319508">
+                                 <color>
+                                    <Color red="0.23999999463558197" green="1.0" blue="0.9508620500564575" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.846390168970814">
+                                 <color>
+                                    <Color red="0.9037036895751953" green="0.9261728525161743" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.9037036895751953" green="0.9261728525161743" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </stroke>
+                  </Circle>
+                  <JFXButton id="btnTop" fx:id="about" layoutX="21.0" layoutY="16.0" prefHeight="47.0" prefWidth="93.0" ripplerFill="#bdebf7" styleClass="btnGoogle" text="About">
+                     <graphic>
+                        <ImageView fx:id="iconUser121" fitHeight="22.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+                           <image>
+                              <Image url="@../../../Icones/icons8_info_48px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip fx:id="tooltipAbout" textOverrun="CENTER_ELLIPSIS" wrapText="true" />
+                     </tooltip>
+                  </JFXButton>
+                  <ImageView fx:id="img5" fitHeight="122.0" fitWidth="125.0" layoutX="141.0" layoutY="199.0">
+                     <image>
+                        <Image url="@../../../Icones/imgs/icn3.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img2" fitHeight="194.0" fitWidth="130.0" layoutX="223.0" layoutY="146.0">
+                     <image>
+                        <Image url="@../../../Icones/imgs/icn2.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img3" fitHeight="172.0" fitWidth="115.0" layoutX="215.0" layoutY="276.0">
+                     <image>
+                        <Image url="@../../../Icones/imgs/icn6.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img4" fitHeight="156.0" fitWidth="107.0" layoutX="110.0" layoutY="303.0">
+                     <image>
+                        <Image url="@../../../Icones/imgs/icn5.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img1" fitHeight="172.0" fitWidth="105.0" layoutX="58.0" layoutY="135.0">
+                     <image>
+                        <Image url="@../../../Icones/imgs/icn4.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="icn1" fitHeight="55.0" fitWidth="62.0" layoutX="154.0" layoutY="98.0">
+                     <image>
+                        <Image url="@../../../Icones/imgs/icn9.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="icn2" fitHeight="52.0" fitWidth="41.0" layoutX="350.0" layoutY="242.0">
+                     <image>
+                        <Image url="@../../../Icones/imgs/icn1.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="icn3" fitHeight="46.0" fitWidth="42.0" layoutX="94.0" layoutY="425.0">
+                     <image>
+                        <Image url="@../../../Icones/imgs/icn7.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="icn4" fitHeight="55.0" fitWidth="50.0" layoutX="34.0" layoutY="335.0">
+                     <image>
+                        <Image url="@../../../Icones/imgs/icn8.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="login" layoutX="787.8000000000001" onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="502.0" prefWidth="374.0" style="-fx-background-color: white; -fx-background-radius: 0 30px 30px 0;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="-375.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="36.0" layoutY="74.0" style="-fx-font-weight: 700;" text="Login" textFill="#383838">
+                     <font>
+                        <Font name="Segoe UI" size="28.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="usertext" layoutX="65.0" layoutY="147.0" onKeyTyped="#validate" onMouseClicked="#icon1change" prefHeight="32.0" prefWidth="285.0" promptText="Nom utilisateur" styleClass="form_field">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <font>
+                        <Font name="Segoe UI" size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="2.0" right="10.0" top="10.0" />
+                     </padding>
+                  </TextField>
+                  <ImageView fx:id="iconUser" fitHeight="28.0" fitWidth="28.0" layoutX="32.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+                     <image>
+                        <Image url="@../../../Icones/icons8_customer_skin_type_7_48px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="iconLock" fitHeight="28.0" fitWidth="28.0" layoutX="31.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+                     <image>
+                        <Image url="@../../../Icones/icons8_lock_48px.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="246.0" layoutY="197.0" mnemonicParsing="false" styleClass="mdbo" text="Mot de passe oublié ?">
+                     <font>
+                        <Font name="Segoe UI" size="11.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip text="Si vous avez oublié votre mot de passe vous pouvez le réinitialiser...Comming soon(cette fonctionnalité pas encore existé)" wrapText="true" />
+                     </tooltip>
+                  </Button>
+                  <PasswordField fx:id="passfield" layoutX="65.0" layoutY="219.0" onKeyTyped="#validate" prefHeight="22.0" prefWidth="285.0" promptText="Mot de passe" styleClass="form_field">
+                     <font>
+                        <Font name="Segoe UI" size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="2.0" right="10.0" top="10.0" />
+                     </padding>
+                  </PasswordField>
+                  <ImageView fx:id="iconFb" fitHeight="22.0" fitWidth="25.0" layoutX="274.0" layoutY="464.0" onMouseClicked="#ToFb" opacity="0.42" pickOnBounds="true" preserveRatio="true" styleClass="icns">
+                     <image>
+                        <Image url="@../../../Icones/icons8_Facebook_48px.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="iconMail" fitHeight="22.0" fitWidth="25.0" layoutX="306.0" layoutY="464.0" opacity="0.42" pickOnBounds="true" preserveRatio="true" styleClass="icns">
+                     <image>
+                        <Image url="@../../../Icones/icons8_gmail_48px.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="iconGit" fitHeight="22.0" fitWidth="25.0" layoutX="338.0" layoutY="464.0" opacity="0.42" pickOnBounds="true" preserveRatio="true" styleClass="icns">
+                     <image>
+                        <Image url="@../../../Icones/icons8_github_48px_1.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <JFXButton layoutX="44.0" layoutY="362.0" prefHeight="47.0" prefWidth="144.0" ripplerFill="#bdebf7" styleClass="btnGoogle" text="Google">
+                     <graphic>
+                        <ImageView fx:id="iconUser12" fitHeight="22.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+                           <image>
+                              <Image url="@../../../Icones/icons8_google_48px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip text="Google...Comming soon(cette fonctionnalité pas encore existé)" />
+                     </tooltip>
+                  </JFXButton>
+                  <JFXButton id="btnFacebook" layoutX="198.0" layoutY="362.0" prefHeight="47.0" prefWidth="153.0" ripplerFill="#6d91ff" styleClass="btnGoogle" text="Facebook">
+                     <graphic>
+                        <ImageView fx:id="iconUser111" fitHeight="22.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+                           <image>
+                              <Image url="@../../../Icones/icons8_Facebook_48px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip text="Facebook...Comming soon(cette fonctionnalité pas encore existé)" />
+                     </tooltip>
+                  </JFXButton>
+                  <Line endX="100.0" layoutX="198.0" layoutY="333.0" opacity="0.13" startX="-100.0" />
+                  <Label layoutX="161.0" layoutY="336.0" style="-fx-font-weight: 700;" text="Easy login with" textFill="#bcbcbc">
+                     <font>
+                        <Font name="Segoe UI" size="9.0" />
+                     </font>
+                  </Label>
+                  <JFXButton layoutX="39.0" layoutY="276.0" onAction="#logBtn" prefHeight="47.0" prefWidth="318.0" ripplerFill="#0094ff" styleClass="btn" text="Login">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <ImageView fitHeight="64.0" fitWidth="123.0" layoutX="243.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Icones/dental-clinic-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="190.0" layoutY="426.0" mnemonicParsing="false" onAction="#ToSignup" styleClass="mdbo" text="Créer un compte">
+                     <font>
+                        <Font name="Segoe UI" size="11.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip text="Créer un nouveau compte" />
+                     </tooltip>
+                  </Button>
+                  <Label layoutX="95.0" layoutY="429.0" prefHeight="18.0" prefWidth="102.0" text="Pas encore inscrit ?" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

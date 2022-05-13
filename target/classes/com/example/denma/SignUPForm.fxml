@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="580.0" prefWidth="941.0" style="-fx-background-color: #273044;" styleClass="parent" stylesheets="@../../../Style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.denma.controllers.SignUPForm">
+   <right>
+            <AnchorPane prefHeight="580.0" prefWidth="506.0" style="-fx-background-color: #0056FB; -fx-background-radius: 0 30px 30px 0;" BorderPane.alignment="CENTER">
+               <children>
+            <JFXButton layoutX="415.0" layoutY="449.0" prefHeight="94.0" prefWidth="56.0" style="-fx-background-color: #013AAE; -fx-shape: &quot;M254.038 110.603 252.238 313.799 332.294 367.367 334.051 164.18&quot;;" text="." textFill="TRANSPARENT">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="275.0" layoutY="449.0" prefHeight="248.0" prefWidth="123.0" style="-fx-background-color: #013AAE; -fx-shape: &quot;M254.038 110.603 252.238 313.799 332.294 367.367 334.051 164.18&quot;;" text="." textFill="TRANSPARENT" AnchorPane.bottomAnchor="-117.0">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="358.0" layoutY="54.0" prefHeight="242.0" prefWidth="130.0" style="-fx-background-color: #013AAE; -fx-shape: &quot;M254.038 110.603 252.238 313.799 332.294 367.367 334.051 164.18&quot;;" text="." textFill="TRANSPARENT">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </JFXButton>
+                  <ImageView accessibleHelp="Shutdown" fitHeight="37.0" fitWidth="46.0" layoutX="457.0" layoutY="21.0" onMouseClicked="#CloseClicked" opacity="0.65" pickOnBounds="true" preserveRatio="true" styleClass="icns">
+                     <image>
+                        <Image url="@../../../Icones/icons8_shutdown_60px.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="iconUser1" fitHeight="22.0" fitWidth="25.0" layoutX="411.0" layoutY="546.0" opacity="0.42" pickOnBounds="true" preserveRatio="true" styleClass="icns">
+                     <image>
+                        <Image url="@../../../Icones/icons8_gmail_48px.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="iconUser11" fitHeight="22.0" fitWidth="25.0" layoutX="443.0" layoutY="546.0" opacity="0.42" pickOnBounds="true" preserveRatio="true" styleClass="icns">
+                     <image>
+                        <Image url="@../../../Icones/icons8_Facebook_48px.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="iconUser1111" fitHeight="22.0" fitWidth="25.0" layoutX="475.0" layoutY="546.0" opacity="0.42" pickOnBounds="true" preserveRatio="true" styleClass="icns">
+                     <image>
+                        <Image url="@../../../Icones/icons8_github_48px_1.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+            <JFXButton layoutX="348.0" layoutY="39.0" prefHeight="228.0" prefWidth="121.0" styleClass="img2" text="." textFill="TRANSPARENT">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="88.0" layoutY="63.0" prefHeight="90.0" prefWidth="46.0" style="-fx-background-color: #FFD766; -fx-shape: &quot;M254.038 110.603 252.238 313.799 332.294 367.367 334.051 164.18&quot;;" text="." textFill="TRANSPARENT">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="354.0" layoutY="390.0" prefHeight="82.0" prefWidth="43.0" style="-fx-background-color: #013AAE; -fx-shape: &quot;M254.038 110.603 252.238 313.799 332.294 367.367 334.051 164.18&quot;;" text="." textFill="TRANSPARENT">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="411.0" layoutY="-40.0" prefHeight="82.0" prefWidth="43.0" style="-fx-background-color: #013AAE; -fx-shape: &quot;M254.038 110.603 252.238 313.799 332.294 367.367 334.051 164.18&quot;;" text="." textFill="TRANSPARENT" AnchorPane.topAnchor="-40.0">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="94.0" layoutY="224.0" prefHeight="67.0" prefWidth="212.0" text="Gestion cabinet dentaire" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Segoe UI Bold" size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="95.0" layoutY="301.0" prefHeight="51.0" prefWidth="241.0" text="Application pour aider toute les dentistes pour mieux gérer leur cabinet dentaire ainsi de gerer les rendez vous." textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Segoe UI" size="13.0" />
+               </font>
+            </Label>
+               </children>
+            </AnchorPane>
+   </right>
+   <center>
+            <AnchorPane fx:id="login" onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="580.0" prefWidth="510.0" style="-fx-background-color: white; -fx-background-radius: 30px 0 0 30px;" BorderPane.alignment="CENTER">
+               <children>
+            <JFXButton layoutX="416.79999999999995" layoutY="361.0" prefHeight="182.0" prefWidth="90.0" style="-fx-background-color: #B6D3FF; -fx-shape: &quot;M254.038 110.603 252.238 313.799 332.294 367.367 334.051 164.18&quot;;" text="." textFill="TRANSPARENT" AnchorPane.rightAnchor="-72.0">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </JFXButton>
+                  <Label layoutX="35.0" layoutY="119.0" style="-fx-font-weight: 700;" text="Sign up" textFill="#383838">
+                     <font>
+                        <Font name="Segoe UI" size="28.0" />
+                     </font>
+                  </Label>
+            <VBox layoutX="37.0" layoutY="183.0" prefHeight="156.0" prefWidth="287.0" spacing="15.0">
+               <children>
+                  <HBox prefHeight="42.0" prefWidth="287.0" spacing="27.0">
+                     <children>
+                              <TextField fx:id="prenotext" onKeyTyped="#validate" onMouseClicked="#icon1change" prefHeight="42.0" prefWidth="130.0" promptText="Prénom*" styleClass="form_field">
+                                 <effect>
+                                    <Glow />
+                                 </effect>
+                                 <font>
+                                    <Font name="Segoe UI" size="15.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="10.0" left="2.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </TextField>
+                        <TextField fx:id="nomtext" onKeyTyped="#validate" onMouseClicked="#icon1change" prefHeight="42.0" prefWidth="130.0" promptText="Nom*" styleClass="form_field">
+                           <effect>
+                              <Glow />
+                           </effect>
+                           <font>
+                              <Font name="Segoe UI" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="2.0" right="10.0" top="10.0" />
+                           </padding>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <TextField fx:id="usertext" onKeyTyped="#validate" onMouseClicked="#icon1change" prefHeight="42.0" prefWidth="285.0" promptText="E-mail*" styleClass="form_field">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <font>
+                        <Font name="Segoe UI" size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="2.0" right="10.0" top="10.0" />
+                     </padding>
+                  </TextField>
+                        <PasswordField fx:id="passfield" onKeyTyped="#validate" prefHeight="42.0" prefWidth="285.0" promptText="Mot de passe*" styleClass="form_field">
+                           <font>
+                              <Font name="Segoe UI" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="2.0" right="10.0" top="10.0" />
+                           </padding>
+                        </PasswordField>
+               </children>
+            </VBox>
+                  <JFXButton layoutX="43.0" layoutY="436.0" prefHeight="47.0" prefWidth="129.0" ripplerFill="#bdebf7" styleClass="btnGoogle" text="Google">
+                     <graphic>
+                        <ImageView fx:id="iconUser12" fitHeight="22.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+                           <image>
+                              <Image url="@../../../Icones/icons8_google_48px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip text="Google" />
+                     </tooltip>
+                  </JFXButton>
+                  <JFXButton id="btnFacebook" layoutX="191.0" layoutY="436.0" prefHeight="47.0" prefWidth="130.0" ripplerFill="#6d91ff" styleClass="btnGoogle" text="Facebook">
+                     <graphic>
+                        <ImageView fx:id="iconUser111" fitHeight="22.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+                           <image>
+                              <Image url="@../../../Icones/icons8_Facebook_48px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip text="Facebook" />
+                     </tooltip>
+                  </JFXButton>
+                  <Line endX="100.0" layoutX="188.0" layoutY="407.0" opacity="0.13" startX="-100.0" />
+                  <Label layoutX="154.0" layoutY="410.0" style="-fx-font-weight: 700;" text="S'inscrir avec" textFill="#bcbcbc">
+                     <font>
+                        <Font name="Segoe UI" size="9.0" />
+                     </font>
+                  </Label>
+                  <JFXButton layoutX="38.0" layoutY="350.0" onAction="#SignupBtn" prefHeight="47.0" prefWidth="285.0" ripplerFill="#0094ff" styleClass="btn" text="Sign up">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <Button layoutX="187.0" layoutY="494.0" mnemonicParsing="false" onAction="#ToLogin" styleClass="mdbo" text="Login">
+                     <font>
+                        <Font name="Segoe UI" size="11.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip text="Créer un nouveau compte" />
+                     </tooltip>
+                  </Button>
+                  <Label layoutX="125.0" layoutY="496.0" prefHeight="18.0" prefWidth="70.0" text="Déjà inscrit ?" />
+                  <ImageView fitHeight="64.0" fitWidth="123.0" layoutX="60.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Icones/dental-clinic-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+            <JFXButton layoutX="272.0" layoutY="11.0" prefHeight="178.0" prefWidth="87.0" style="-fx-background-color: #ffb91d; -fx-shape: &quot;M254.038 110.603 252.238 313.799 332.294 367.367 334.051 164.18&quot;;" text="." textFill="TRANSPARENT" AnchorPane.rightAnchor="-65.0" AnchorPane.topAnchor="50.0">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="378.00000000000006" layoutY="334.0" prefHeight="180.0" prefWidth="90.0" styleClass="img" text="." textFill="TRANSPARENT" AnchorPane.rightAnchor="-56.0">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </JFXButton>
+            <JFXButton id="btnTopd" fx:id="about" layoutX="448.20000000000005" layoutY="14.0" prefHeight="41.0" prefWidth="96.0" styleClass="btnGoogle" text="About" AnchorPane.rightAnchor="-109.00000000000006">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <tooltip>
+                  <Tooltip fx:id="tooltipAbout" textOverrun="CENTER_ELLIPSIS" wrapText="true" />
+               </tooltip>
+               <graphic>
+                  <ImageView fx:id="iconUser1211" fitHeight="22.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+                     <image>
+                        <Image url="@../../../Icones/icons8_info_48px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+               </children>
+            </AnchorPane>
+   </center>
+      </BorderPane>

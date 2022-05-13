@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="771.0" prefWidth="947.0" style="-fx-background-color: #E3F2FD;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="23.0" layoutY="17.0" prefHeight="718.0" prefWidth="890.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="24.0">
+         <children>
+            <AnchorPane layoutY="446.0" prefHeight="230.0" prefWidth="502.0" styleClass="box">
+               <children>
+                  <TableView id="table" fx:id="interventions_TV" layoutY="59.0" prefHeight="170.0" prefWidth="438.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+                    <columns>
+                      <TableColumn fx:id="coli_id" prefWidth="87.99999618530273" text="ID intervention" />
+                      <TableColumn fx:id="coli_dp" prefWidth="86.39997100830078" text="Date prévue" />
+                        <TableColumn fx:id="coli_dr" prefWidth="88.0" text="Date réelle" />
+                        <TableColumn fx:id="coli_erv" minWidth="0.0" prefWidth="75.20001220703125" text="Etat RV" />
+                        <TableColumn fx:id="coli_act" prefWidth="166.39999389648438" text="Actions" />
+                    </columns>
+                  </TableView>
+                  <AnchorPane prefHeight="62.0" prefWidth="502.0" style="-fx-background-color: white; -fx-background-radius: 10px 10px 0 0; -fx-border-radius: 10px 10px 0 0; -fx-border-color: #CCE7FC #CCE7FC #EEEEEE #CCE7FC;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label layoutX="12.0" layoutY="15.0" styleClass="medium" text="Liste des interventions">
+                           <font>
+                              <Font name="Segoe UI" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="519.0" layoutY="446.0" prefHeight="230.0" prefWidth="378.0" styleClass="box">
+               <children>
+                  <TableView id="table" fx:id="radios_TV" layoutY="58.0" prefHeight="170.0" prefWidth="438.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+                     <columns>
+                        <TableColumn fx:id="colr_id" prefWidth="75.0" text="ID radio" />
+                        <TableColumn fx:id="colr_dr" prefWidth="97.60003662109375" text="Date radio" />
+                        <TableColumn fx:id="colr_chem" prefWidth="86.39996337890625" text="Chemin" />
+                        <TableColumn fx:id="colr_act" prefWidth="124.00006103515625" text="Actions" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <AnchorPane prefHeight="61.0" prefWidth="438.0" style="-fx-background-color: white; -fx-background-radius: 10px 10px 0 0; -fx-border-radius: 10px 10px 0 0; -fx-border-color: #CCE7FC #CCE7FC #EEEEEE #CCE7FC;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label layoutX="12.0" layoutY="16.0" styleClass="medium" text="Liste des radios">
+                           <font>
+                              <Font name="Segoe UI" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="75.0" prefHeight="358.0" prefWidth="502.0" styleClass="box">
+               <children>
+                  <GridPane layoutY="59.0" prefHeight="298.0" prefWidth="386.0" style="-fx-background-color: white; -fx-border-color: transparent #CCE7FC #CCE7FC #CCE7FC; -fx-background-radius: 0 0 10px 10px; -fx-border-radius: 0 0 10px 10px;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="588.8000000000001" minWidth="10.0" prefWidth="145.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="750.2000366210938" minWidth="0.0" prefWidth="355.4" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <TextField fx:id="case_idSoin" prefHeight="40.0" prefWidth="758.0" promptText="Entrer votre ID soin" style="-fx-padding: 0 0 0 40;" styleClass="textbox" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets right="20.0" top="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <Label text="ID soin" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Nirmala UI" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets left="16.0" />
+                           </padding>
+                           <GridPane.margin>
+                              <Insets top="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="Date début" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Nirmala UI" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets left="16.0" />
+                           </padding>
+                           <GridPane.margin>
+                              <Insets top="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <DatePicker fx:id="case_dateDébut" prefHeight="40.0" prefWidth="338.0" promptText="Début de soin" showWeekNumbers="true" style="-fx-font-size: 10px; -fx-padding: 0;" styleClass="dateAct" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets right="20.0" top="10.0" />
+                           </GridPane.margin>
+                        </DatePicker>
+                        <Label text="Prix comptabilisé" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Nirmala UI" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets left="16.0" />
+                           </padding>
+                           <GridPane.margin>
+                              <Insets top="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <TextField fx:id="case_prixComptabilisé" prefHeight="40.0" prefWidth="711.0" promptText="Le prix de soin" style="-fx-padding: 0 0 0 40;" styleClass="textbox" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets right="20.0" top="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <DatePicker fx:id="case_dateFin" prefHeight="40.0" prefWidth="334.0" promptText="Fin de soin" style="-fx-font-size: 10px; -fx-padding: 0;" styleClass="dateAct" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets right="20.0" top="10.0" />
+                           </GridPane.margin>
+                        </DatePicker>
+                        <Label text="Date fin" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="Nirmala UI" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets left="16.0" />
+                           </padding>
+                           <GridPane.margin>
+                              <Insets top="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="Etat de l'acte" GridPane.rowIndex="5">
+                           <font>
+                              <Font name="Nirmala UI" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets left="16.0" />
+                           </padding>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </Label>
+                        <GridPane prefHeight="38.0" prefWidth="732.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="138.39999713897706" minWidth="10.0" prefWidth="95.3999755859375" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="507.1999267578125" minWidth="10.0" prefWidth="105.5999755859375" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="164.00001220703126" minWidth="0.0" prefWidth="155.2000244140625" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <JFXRadioButton fx:id="acteEnCours" selected="true" text="En cours">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="etatActe" />
+                                 </toggleGroup>
+                                 <selectedColor>
+                                    <Color green="0.4833333194255829" blue="1.0" />
+                                 </selectedColor>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="acteTérminé" text="Terminé" toggleGroup="$etatActe" GridPane.columnIndex="1">
+                                 <selectedColor>
+                                    <Color red="1.0" green="0.18518517911434174" blue="0.18518517911434174" />
+                                 </selectedColor>
+                              </JFXRadioButton>
+                              <JFXButton id="edit-button" fx:id="printButton" contentDisplay="TOP" prefHeight="50.0" prefWidth="134.0" ripplerFill="#ffa4af" styleClass="database-button" text="PRINT ACT" textFill="WHITE" GridPane.columnIndex="2">
+                                 <font>
+                                    <Font name="Nirmala UI Bold" size="12.0" />
+                                 </font>
+                                 <graphic>
+                                    <AnchorPane prefHeight="18.0" prefWidth="18.0" style="-fx-shape: &quot;M 11 2 L 11 15 L 5 15 C 3.346 15 2 16.346 2 18 L 2 36 C 2 37.654 3.346 39 5 39 L 11 39 L 11 48 L 39 48 L 39 39 L 45 39 C 46.654 39 48 37.654 48 36 L 48 18 C 48 16.346 46.654 15 45 15 L 39 15 L 39 2 L 11 2 Z M 13 4 L 37 4 L 37 15 L 13 15 L 13 4 Z M 41 20 C 42.105 20 43 20.895 43 22 C 43 23.105 42.105 24 41 24 C 39.895 24 39 23.105 39 22 C 39 20.895 39.895 20 41 20 Z M 13 30 L 37 30 L 37 39 L 37 46 L 13 46 L 13 39 L 13 30 Z M 17 33 A 1.0001 1.0001 0 1 0 17 35 L 33 35 A 1.0001 1.0001 0 1 0 33 33 L 17 33 Z M 17 37 A 1.0001 1.0001 0 1 0 17 39 L 29 39 A 1.0001 1.0001 0 1 0 29 37 L 17 37 Z M 17 41 A 1.0001 1.0001 0 1 0 17 43 L 33 43 A 1.0001 1.0001 0 1 0 33 41 L 17 41 Z&quot;;" styleClass="save" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </GridPane>
+                  <AnchorPane layoutX="158.0" layoutY="85.0" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: black; -fx-shape: &quot;M 54 1 C 48.08 1 43.0602 3.42953 39.4902 8.01953 C 30.6002 19.4695 32.0895 41.7491 36.4395 58.7891 C 36.8495 60.3891 38.4898 61.3592 40.0898 60.9492 C 41.6898 60.5392 42.66 58.9008 42.25 57.3008 C 37.22 37.6208 38.0005 19.7192 44.2305 11.6992 C 46.6905 8.53922 49.89 7 54 7 C 57 7 59.8795 7.86906 62.9395 8.78906 C 66.1295 9.74906 69.43 10.7402 73 10.7402 C 76.57 10.7402 79.8705 9.74906 83.0605 8.78906 C 86.1205 7.86906 89 7 92 7 C 96.48 7 99.8802 8.82984 102.41 12.5898 C 109.66 23.3798 108.15 49.3905 98.9805 71.8105 C 98.3505 73.3405 99.0891 75.0907 100.619 75.7207 C 100.989 75.8707 101.37 75.9395 101.75 75.9395 C 102.93 75.9395 104.049 75.2401 104.529 74.0801 C 116.059 45.9001 114.691 20.13 107.391 9.25 C 103.771 3.85 98.45 1 92 1 C 88.12 1 84.6698 2.03906 81.3398 3.03906 C 78.4298 3.90906 75.69 4.74023 73 4.74023 C 70.31 4.74023 67.5702 3.90906 64.6602 3.03906 C 61.3302 2.03906 57.88 1 54 1 Z M 73 52 C 65.05 52 62.6298 62.6992 61.8398 66.1992 C 61.4698 67.8192 62.4796 69.4191 64.0996 69.7891 C 65.7096 70.1591 67.3195 69.1493 67.6895 67.5293 C 69.0595 61.4793 70.99 58 73 58 C 74.65 58 77.7092 60.2995 79.6992 75.6895 C 79.8892 77.2094 81.1799 78.3105 82.6699 78.3105 C 82.7899 78.3105 82.9205 78.2991 83.0605 78.2891 C 84.7005 78.0791 85.8604 76.5697 85.6504 74.9297 C 84.1804 63.5897 81.53 52 73 52 Z M 35.6641 68.8496 C 28.3745 68.7337 21.1191 71.0344 15.1191 75.6094 C 13.7991 76.6094 13.5508 78.4905 14.5508 79.8105 C 15.5608 81.1305 17.4398 81.3809 18.7598 80.3809 C 26.6198 74.3909 37.0991 73.1597 46.1191 77.1797 L 72.0098 88.6895 C 72.9098 89.0895 73.6595 89.7403 74.1895 90.5703 C 75.0895 92.0003 75.2191 93.7591 74.5391 95.2891 C 74.3291 95.7591 74.0605 96.1805 73.7305 96.5605 C 72.2705 98.2105 69.9495 98.7203 67.9395 97.8203 L 47.9395 88.8809 L 45.4902 94.3594 L 65.4902 103.301 C 66.9502 103.951 68.48 104.27 70 104.27 C 73.08 104.27 76.0807 102.969 78.2207 100.529 C 78.9507 99.6993 79.5598 98.7602 80.0098 97.7402 C 81.5098 94.3602 81.2302 90.4794 79.2402 87.3594 C 78.0802 85.5294 76.4195 84.1007 74.4395 83.2207 L 48.5605 71.6992 C 44.4243 69.858 40.0378 68.9192 35.6641 68.8496 Z M 115.283 80.3594 C 113.845 80.3831 112.388 80.677 110.99 81.2695 L 90.4902 90 C 88.9702 90.65 88.2602 92.4195 88.9102 93.9395 C 89.5502 95.4594 91.3198 96.1695 92.8398 95.5195 L 113.34 86.7891 C 115.98 85.6791 119.031 86.7399 120.141 89.1699 C 120.711 90.4199 120.75 91.8003 120.26 93.0703 C 119.77 94.3403 118.811 95.3294 117.551 95.8594 L 61.1992 119.689 C 56.6692 121.609 51.5402 121.47 47.1602 119.33 L 19.3398 105.32 C 18.3498 104.82 17.16 104.911 16.25 105.561 L 2.25 115.561 C 0.9 116.531 0.590781 118.4 1.55078 119.75 C 2.52078 121.1 4.39023 121.409 5.74023 120.449 L 18.2695 111.5 L 44.5098 124.711 C 47.6798 126.261 51.1298 127.039 54.5898 127.039 C 57.6298 127.039 60.6793 126.431 63.5293 125.211 L 119.881 101.381 C 122.641 100.211 124.76 98.0305 125.85 95.2305 C 126.94 92.4305 126.84 89.3902 125.59 86.6602 C 123.745 82.6477 119.599 80.2881 115.283 80.3594 Z&quot;;" />
+                  <AnchorPane layoutX="158.0" layoutY="143.0" prefHeight="20.0" prefWidth="17.0" style="-fx-background-color: black; -fx-shape: &quot;M 6.5 1 C 6.32031 0.996094 6.15234 1.09375 6.0625 1.24609 C 5.96875 1.40234 5.96875 1.59766 6.0625 1.75391 C 6.15234 1.90625 6.32031 2.00391 6.5 2 L 7 2 L 7 3.02344 C 4.20313 3.28125 2 5.63672 2 8.5 C 2 11.5313 4.46875 14 7.5 14 C 10.5313 14 13 11.5313 13 8.5 C 13 5.63672 10.7969 3.28125 8 3.02344 L 8 2 L 8.5 2 C 8.67969 2.00391 8.84766 1.90625 8.9375 1.75391 C 9.03125 1.59766 9.03125 1.40234 8.9375 1.24609 C 8.84766 1.09375 8.67969 0.996094 8.5 1 Z M 11.4961 2.99219 C 11.2891 2.99609 11.1055 3.11719 11.0313 3.30859 C 10.9531 3.49609 11 3.71094 11.1445 3.85156 L 12.207 4.91406 C 12.3359 5.04688 12.5195 5.09766 12.6953 5.05469 C 12.8711 5.00781 13.0078 4.87109 13.0547 4.69531 C 13.0977 4.51953 13.0469 4.33594 12.918 4.21094 L 11.8555 3.14844 C 11.7578 3.05078 11.6289 2.99219 11.4961 2.99219 Z M 7.5 4 C 9.99219 4 12 6.00781 12 8.5 C 12 10.9922 9.99219 13 7.5 13 C 5.00781 13 3 10.9922 3 8.5 C 3 6.00781 5.00781 4 7.5 4 Z M 5.49219 5.99219 C 5.28906 5.99609 5.10547 6.11719 5.03125 6.30859 C 4.95313 6.49609 5 6.71094 5.14844 6.85156 L 7.14844 8.85156 C 7.27344 8.98438 7.45703 9.03516 7.63281 8.99219 C 7.80859 8.94531 7.94531 8.80859 7.99219 8.63281 C 8.03516 8.45703 7.98438 8.27344 7.85156 8.14844 L 5.85156 6.14844 C 5.75781 6.05078 5.62891 5.99219 5.49219 5.99219 Z&quot;;" />
+                  <AnchorPane layoutX="158.0" layoutY="206.0" prefHeight="17.0" prefWidth="20.0" style="-fx-background-color: black; -fx-shape: &quot;M 0 2 L 0 9.92383 L 0 18 L 26 18 L 26 8.92383 L 26 2 L 0 2 Z M 5.04297 4 L 20.957 4 L 21.5703 4.59766 C 21.5503 4.69366 21.5117 4.78377 21.5117 4.88477 C 21.5117 5.71177 22.1979 6.38086 23.0449 6.38086 C 23.1489 6.38086 23.2399 6.34322 23.3379 6.32422 L 24 6.9707 L 24 13.0313 L 23.3398 13.6758 C 23.2408 13.6568 23.1489 13.6172 23.0449 13.6172 C 22.1979 13.6172 21.5117 14.2872 21.5117 15.1152 C 21.5117 15.2172 21.5503 15.3044 21.5703 15.4004 L 20.957 16 L 5.04297 16 L 4.42969 15.4023 C 4.44969 15.3063 4.48828 15.2172 4.48828 15.1152 C 4.48828 14.2882 3.80208 13.6172 2.95508 13.6172 C 2.85108 13.6172 2.76011 13.6568 2.66211 13.6758 L 2 13.0293 L 2 7.2168 L 2.66016 6.32422 C 2.75816 6.34422 2.84913 6.38281 2.95313 6.38281 C 3.80013 6.38281 4.48633 5.71277 4.48633 4.88477 C 4.48633 4.78277 4.44773 4.69561 4.42773 4.59961 L 5.04297 4 Z M 13 5.56055 A 5 4.47 0 0 0 8 10.0293 A 5 4.47 0 0 0 13 14.5 A 5 4.47 0 0 0 18 10.0293 A 5 4.47 0 0 0 13 5.56055 Z M 20.5 8.5 A 1.499 1.499 0 0 0 19.002 9.99805 A 1.499 1.499 0 0 0 20.5 11.498 A 1.499 1.499 0 0 0 21.998 9.99805 A 1.499 1.499 0 0 0 20.5 8.5 Z M 5.5 8.50195 A 1.5 1.5 0 0 0 4 10.002 A 1.5 1.5 0 0 0 5.5 11.502 A 1.5 1.5 0 0 0 7 10.002 A 1.5 1.5 0 0 0 5.5 8.50195 Z M 0 19 L 0 21 C 2.33991 21 16.0412 21.2011 22.6641 23.5664 L 24 24.0449 L 24 19 L 22 19 L 22 21.3652 C 14.4423 19.1162 2.28471 19 0 19 Z&quot;;" />
+                  <AnchorPane layoutX="158.0" layoutY="261.0" prefHeight="20.0" prefWidth="17.0" style="-fx-background-color: black; -fx-shape: &quot;M 21.5 3 A 1.50015 1.50015 0 1 0 21.5 6 L 22.5 6 L 22.5 8.07617 C 13.2757 8.84258 6 16.5813 6 26 C 6 35.925 14.075 44 24 44 C 33.925 44 42 35.925 42 26 C 42 21.5764 40.3895 17.5261 37.7324 14.3887 L 39.5566 12.5645 A 1.50015 1.50015 0 0 0 38.4668 9.99023 A 1.50015 1.50015 0 0 0 37.4355 10.4434 L 35.6113 12.2676 C 32.833 9.91464 29.3364 8.39492 25.5 8.07617 L 25.5 6 L 26.5 6 A 1.50015 1.50015 0 1 0 26.5 3 L 21.5 3 Z M 30.5 18 C 30.8838 18 31.2675 18.1465 31.5605 18.4395 C 32.1465 19.0245 32.1455 19.9745 31.5605 20.5605 L 26.8887 25.2324 C 26.9537 25.4784 27 25.733 27 26 C 27 27.657 25.657 29 24 29 C 22.343 29 21 27.657 21 26 C 21 24.343 22.343 23 24 23 C 24.267 23 24.5216 23.0453 24.7676 23.1113 L 29.4395 18.4395 C 29.7325 18.1465 30.1162 18 30.5 18 Z&quot;;" />
+                  <AnchorPane prefHeight="60.0" prefWidth="386.0" style="-fx-background-color: white; -fx-background-radius: 10px 10px 0 0; -fx-border-radius: 10px 10px 0 0; -fx-border-color: #CCE7FC #CCE7FC #EEEEEE #CCE7FC;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label layoutX="12.0" layoutY="16.0" styleClass="medium" text="Informations de soin">
+                           <font>
+                              <Font name="Segoe UI" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <JFXButton fx:id="sauvegarderModif" contentDisplay="TOP" layoutX="742.0" layoutY="694.0" prefHeight="50.0" prefWidth="143.0" ripplerFill="#290099" styleClass="save-button" text="SAVE CHANGES" textFill="WHITE">
+               <font>
+                  <Font name="Nirmala UI Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <AnchorPane prefHeight="18.0" prefWidth="18.0" styleClass="save" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="ajouterRadio" contentDisplay="TOP" layoutX="520.0" layoutY="694.0" prefHeight="50.0" prefWidth="143.0" ripplerFill="#95ff67" styleClass="addbtn" text="ADD RADIO" textFill="WHITE">
+               <font>
+                  <Font name="Nirmala UI Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <AnchorPane prefHeight="18.0" prefWidth="18.0" style="-fx-shape: &quot;M 35.5 5 h -23 C 9.468 5 7 7.468 7 10.5 v 27 c 0 3.032 2.468 5.5 5.5 5.5 h 23 c 3.032 0 5.5 -2.468 5.5 -5.5 v -27 C 41 7.468 38.532 5 35.5 5 Z M 15.939 12.439 c 0.586 -0.586 1.535 -0.586 2.121 0 c 0.177 0.177 0.714 0.718 2.061 0.288 c 3.121 -0.981 5.66 -0.975 8.757 0 c 1.352 0.426 1.885 -0.111 2.062 -0.288 c 0.586 -0.586 1.535 -0.586 2.121 0 s 0.586 1.535 0 2.121 c -1.291 1.291 -3.098 1.655 -5.086 1.028 c -2.523 -0.797 -4.448 -0.79 -6.95 0 c -0.636 0.2 -1.252 0.3 -1.84 0.3 c -1.25 0 -2.367 -0.449 -3.245 -1.328 C 15.354 13.975 15.354 13.025 15.939 12.439 Z M 33.671 20.842 c -1.569 0.785 -2.912 1.046 -4.005 1.046 c -0.81 0 -1.48 -0.144 -2.006 -0.324 C 26.556 21.185 25.59 21 24.709 21 H 24.5 c 0.828 0 1.5 0.672 1.5 1.5 S 25.328 24 24.5 24 c 0.828 0 1.5 0.672 1.5 1.5 S 25.328 27 24.5 27 h 6 c 0.846 0 1.656 0.36 2.225 0.987 c 0.567 0.627 0.845 1.473 0.76 2.32 C 33.333 31.817 31.959 33 30.357 33 h -0.267 c -1.107 0 -2.061 0.827 -2.218 1.924 c -0.14 0.979 -0.686 1.864 -1.496 2.432 c -0.609 0.425 -1.316 0.646 -2.047 0.646 c -0.257 0 -0.516 -0.027 -0.774 -0.082 c -1.283 -0.272 -2.321 -1.282 -2.709 -2.635 l -0.188 -0.66 C 20.385 33.668 19.499 33 18.505 33 H 17.5 c -0.846 0 -1.656 -0.36 -2.225 -0.987 c -0.567 -0.627 -0.845 -1.473 -0.76 -2.32 C 14.667 28.183 16.041 27 17.643 27 H 24.5 c -0.828 0 -1.5 -0.672 -1.5 -1.5 s 0.672 -1.5 1.5 -1.5 c -0.828 0 -1.5 -0.672 -1.5 -1.5 s 0.672 -1.5 1.5 -1.5 h -0.459 c -1.034 0 -1.912 0.132 -2.685 0.402 c -3.259 1.141 -5.566 0.008 -6.417 -0.842 c -0.586 -0.586 -0.586 -1.535 0 -2.121 c 0.577 -0.576 1.507 -0.586 2.094 -0.026 c 0.088 0.074 1.147 0.924 3.332 0.157 c 1.096 -0.384 2.298 -0.57 3.676 -0.57 H 24.5 c -0.828 0 -1.5 -0.672 -1.5 -1.5 s 0.672 -1.5 1.5 -1.5 s 1.5 0.672 1.5 1.5 S 25.328 18 24.5 18 h 0.209 c 1.218 0 2.502 0.237 3.927 0.727 c 0.689 0.237 1.892 0.332 3.693 -0.568 c 0.743 -0.368 1.643 -0.069 2.013 0.671 C 34.712 19.57 34.412 20.471 33.671 20.842 Z&quot;;" styleClass="save">
+                     <children>
+                        <JFXButton layoutX="4.0" layoutY="5.0" prefHeight="10.0" prefWidth="9.0" style="-fx-shape: &quot;M 12 2 C 6.477 2 2 6.477 2 12 s 4.477 10 10 10 s 10 -4.477 10 -10 S 17.523 2 12 2 Z M 16 13 h -3 v 3 h -2 v -3 H 8 v -2 h 3 V 8 h 2 v 3 h 3 V 13 Z&quot;;" styleClass="plusR" text="." AnchorPane.bottomAnchor="-2.0" AnchorPane.rightAnchor="-3.0">
+                           <font>
+                              <Font size="1.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="ajouterIntervention" contentDisplay="TOP" layoutY="694.0" prefHeight="50.0" prefWidth="143.0" ripplerFill="#a3b1f7" style="-fx-font-size: 12px;" styleClass="btns" text="ADD INTERVENTION" textFill="WHITE">
+               <font>
+                  <Font name="Nirmala UI Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <AnchorPane prefHeight="18.0" prefWidth="18.0" style="-fx-shape: &quot;M 99.04 27.27 C 95.41 21.21 89.86 18 83 18 c -3.88 0 -7.33 1.04 -10.66 2.04 c -2.9 0.87 -5.65 1.7 -8.34 1.7 s -5.43 -0.83 -8.34 -1.7 C 52.33 19.04 48.88 18 45 18 c -6.44 0 -11.77 2.85 -15.39 8.24 c -7.12 10.6 -8.59 35.31 1.99 62.64 C 29.4 90.89 28 93.78 28 97 c 0 6.07 4.93 11 11 11 s 11 -4.93 11 -11 s -4.93 -11 -11 -11 c -0.68 0 -1.35 0.07 -2 0.19 c -8.24 -21.79 -9.37 -46.23 -2.41 -56.6 C 37.12 25.83 40.52 24 45 24 c 3 0 5.88 0.87 8.94 1.79 c 3.19 0.96 6.49 1.95 10.06 1.95 s 6.87 -0.99 10.06 -1.95 C 77.12 24.87 80 24 83 24 c 4.77 0 8.33 2.08 10.89 6.36 c 7.86 13.14 4.17 44.43 -7.9 66.96 c -2.06 3.85 -5.83 4.88 -8.67 4.55 c -2.88 -0.33 -6.36 -2.2 -7.53 -6.48 c -1.62 -5.95 -2.54 -12.22 -2.75 -18.66 c 6.81 -1.21 12.32 -6.53 16.06 -15.59 c 3.02 -7.31 3.85 -14.51 3.88 -14.81 c 0.18 -1.65 -1 -3.13 -2.65 -3.31 c -1.64 -0.19 -3.13 1 -3.31 2.65 c -0.01 0.07 -0.77 6.65 -3.46 13.19 C 74.23 66.91 69.67 71 64 71 c -13.99 0 -16.99 -25.08 -17.02 -25.33 c -0.19 -1.65 -1.67 -2.83 -3.31 -2.65 c -1.65 0.18 -2.83 1.67 -2.65 3.31 c 0.03 0.3 0.86 7.51 3.88 14.81 c 3.76 9.1 9.3 14.43 16.15 15.61 c 0.21 6.97 1.2 13.76 2.96 20.22 c 1.63 6 6.48 10.16 12.64 10.86 c 0.59 0.07 1.18 0.1 1.76 0.1 c 5.41 0 10.24 -2.88 12.87 -7.78 C 103 78.27 108.92 43.77 99.04 27.27 Z M 44 97 c 0 2.76 -2.24 5 -5 5 s -5 -2.24 -5 -5 s 2.24 -5 5 -5 S 44 94.24 44 97 Z&quot;;" styleClass="save">
+                     <children>
+                        <AnchorPane layoutX="7.999999999999995" layoutY="8.999999999999977" prefHeight="6.0" prefWidth="0.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.rightAnchor="-2.0">
+                           <children>
+                              <AnchorPane layoutX="2.0" layoutY="3.0" prefHeight="5.0" prefWidth="5.0" style="-fx-background-color: white;" />
+                              <JFXButton prefHeight="10.0" prefWidth="9.0" style="-fx-shape: &quot;M 12 2 C 6.477 2 2 6.477 2 12 s 4.477 10 10 10 s 10 -4.477 10 -10 S 17.523 2 12 2 Z M 16 13 h -3 v 3 h -2 v -3 H 8 v -2 h 3 V 8 h 2 v 3 h 3 V 13 Z&quot;;" styleClass="plus" text=".">
+                                 <font>
+                                    <Font size="1.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </graphic>
+            </JFXButton>
+            <AnchorPane prefHeight="60.0" prefWidth="898.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #CCE7FC;" AnchorPane.rightAnchor="0.6000000000000227">
+               <children>
+                  <Label layoutX="12.0" layoutY="14.0" styleClass="big" text="Acte médicale">
+                     <font>
+                        <Font name="Segoe UI" size="24.0" />
+                     </font>
+                  </Label>
+                  <HBox layoutX="560.0" layoutY="20.0" prefHeight="18.0" prefWidth="324.0" spacing="15.0">
+                     <children>
+                        <JFXButton prefHeight="11.0" prefWidth="12.0" style="-fx-shape: &quot;M 25 1.05078 C 24.7825 1.05078 24.5659 1.11977 24.3809 1.25977 L 1.38086 19.2109 C 0.950859 19.5509 0.870937 20.1791 1.21094 20.6191 C 1.55094 21.0491 2.17914 21.1291 2.61914 20.7891 L 4 19.7109 L 4 46 C 4 46.55 4.45 47 5 47 L 19 47 L 19 29 L 31 29 L 31 47 L 45 47 C 45.55 47 46 46.55 46 46 L 46 19.7109 L 47.3809 20.7891 C 47.5709 20.9291 47.78 21 48 21 C 48.3 21 48.5891 20.8691 48.7891 20.6191 C 49.1291 20.1791 49.0491 19.5509 48.6191 19.2109 L 25.6191 1.25977 C 25.4341 1.11977 25.2175 1.05078 25 1.05078 Z M 35 5 L 35 6.05078 L 41 10.7305 L 41 5 L 35 5 Z&quot;; -fx-background-color: rgb(103, 58, 183);" text="." textFill="TRANSPARENT">
+                           <font>
+                              <Font size="1.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="2.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <AnchorPane prefHeight="8.0" prefWidth="4.0" style="-fx-shape: &quot;M 14.9805 2.98047 C 14.1641 2.98047 13.4336 3.47656 13.1289 4.23047 C 12.8203 4.98438 13.0039 5.84766 13.5859 6.41406 L 32.1719 25 L 13.5859 43.5859 C 13.0625 44.0859 12.8516 44.832 13.0352 45.5352 C 13.2188 46.2344 13.7656 46.7813 14.4648 46.9648 C 15.168 47.1484 15.9141 46.9375 16.4141 46.4141 L 36.4141 26.4141 C 37.1953 25.6328 37.1953 24.3672 36.4141 23.5859 L 16.4141 3.58594 C 16.0352 3.19922 15.5195 2.98047 14.9805 2.98047 Z&quot;; -fx-background-color: rgb(158, 158, 158);">
+                           <HBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </HBox.margin>
+                        </AnchorPane>
+                        <Label text="Patient">
+                           <font>
+                              <Font name="Nirmala UI Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane prefHeight="8.0" prefWidth="4.0" style="-fx-shape: &quot;M 14.9805 2.98047 C 14.1641 2.98047 13.4336 3.47656 13.1289 4.23047 C 12.8203 4.98438 13.0039 5.84766 13.5859 6.41406 L 32.1719 25 L 13.5859 43.5859 C 13.0625 44.0859 12.8516 44.832 13.0352 45.5352 C 13.2188 46.2344 13.7656 46.7813 14.4648 46.9648 C 15.168 47.1484 15.9141 46.9375 16.4141 46.4141 L 36.4141 26.4141 C 37.1953 25.6328 37.1953 24.3672 36.4141 23.5859 L 16.4141 3.58594 C 16.0352 3.19922 15.5195 2.98047 14.9805 2.98047 Z&quot;; -fx-background-color: rgb(158, 158, 158);">
+                           <HBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </HBox.margin>
+                        </AnchorPane>
+                        <Label style="-fx-font-weight: bold;" text="Fiche Médicale" textFill="#999999" />
+                        <AnchorPane layoutX="112.0" layoutY="15.0" prefHeight="8.0" prefWidth="4.0" style="-fx-shape: &quot;M 14.9805 2.98047 C 14.1641 2.98047 13.4336 3.47656 13.1289 4.23047 C 12.8203 4.98438 13.0039 5.84766 13.5859 6.41406 L 32.1719 25 L 13.5859 43.5859 C 13.0625 44.0859 12.8516 44.832 13.0352 45.5352 C 13.2188 46.2344 13.7656 46.7813 14.4648 46.9648 C 15.168 47.1484 15.9141 46.9375 16.4141 46.4141 L 36.4141 26.4141 C 37.1953 25.6328 37.1953 24.3672 36.4141 23.5859 L 16.4141 3.58594 C 16.0352 3.19922 15.5195 2.98047 14.9805 2.98047 Z&quot;; -fx-background-color: rgb(158, 158, 158);">
+                           <HBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </HBox.margin>
+                        </AnchorPane>
+                        <Label layoutX="132.0" layoutY="10.0" style="-fx-font-weight: bold;" text="Acte Médicale" textFill="#999999" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <TableView fx:id="med_TV" layoutX="521.0" layoutY="264.0" prefHeight="170.0" prefWidth="378.0" AnchorPane.rightAnchor="1.0">
+               <columns>
+                  <TableColumn fx:id="colm_nom" prefWidth="164.0" text="Nom" />
+                  <TableColumn fx:id="colm_type" prefWidth="142.0" text="Type" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <AnchorPane layoutX="524.0" layoutY="82.0" prefHeight="170.0" prefWidth="378.0" styleClass="box" AnchorPane.rightAnchor="1.0">
+               <children>
+                  <AnchorPane layoutX="2.0" prefHeight="60.0" prefWidth="355.0" styleClass="title" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" styleClass="medium" text="Liste des médicaments" />
+                     </children>
+                  </AnchorPane>
+                  <GridPane layoutY="60.0" prefHeight="112.0" prefWidth="355.0" styleClass="content" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="73.80001220703126" minWidth="10.0" prefWidth="62.400000000000006" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="221.20001220703125" minWidth="10.0" prefWidth="180.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="135.19997558593752" minWidth="10.0" prefWidth="135.19997558593752" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label prefHeight="26.0" prefWidth="57.0" styleClass="small" text="Type" />
+                        <Label prefHeight="26.0" prefWidth="61.0" styleClass="small" text="Nom" GridPane.rowIndex="1" />
+                        <JFXComboBox fx:id="med_type" labelFloat="true" prefHeight="41.0" prefWidth="170.0" promptText="Type" GridPane.columnIndex="1" />
+                        <JFXComboBox fx:id="med_nom" labelFloat="true" prefHeight="42.0" prefWidth="169.0" promptText="Nom" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <JFXButton id="med" fx:id="med_pop" contentDisplay="TOP" prefHeight="46.0" prefWidth="126.0" ripplerFill="#ffe57d" styleClass="addbtn" text="ADD MEDICAMENT" textFill="WHITE" GridPane.columnIndex="2">
+                           <font>
+                              <Font name="Nirmala UI Bold" size="12.0" />
+                           </font>
+                           <graphic>
+                              <AnchorPane prefHeight="18.0" prefWidth="18.0" style="-fx-shape: &quot;M 19.4258 3.00781 C 19.1421 2.99569 18.8545 2.99958 18.5664 3.01758 C 16.5624 3.14258 14.6993 4.09953 13.2793 5.51953 L 5.54492 13.2539 C 2.46092 16.3379 2.18122 21.4086 5.19922 24.5566 C 6.70822 26.1306 8.74887 27 10.9219 27 C 12.2889 27 13.6007 26.6509 14.7637 26.0039 C 13.6627 24.6329 13 22.895 13 21 C 13 18.43 14.2166 16.1485 16.0996 14.6855 L 12.2266 10.8125 C 11.8356 10.4215 11.8356 9.78844 12.2266 9.39844 L 14.8906 6.73438 C 16.0446 5.58037 17.5611 5.00391 19.0781 5.00391 C 20.5941 5.00391 22.1116 5.58037 23.2656 6.73438 C 25.1526 8.62138 25.4714 11.4641 24.2734 13.7051 C 24.8954 13.9841 25.475 14.3407 26 14.7617 C 27.669 11.7497 27.2327 7.87431 24.6797 5.32031 C 23.2657 3.90631 21.4116 3.09269 19.4258 3.00781 Z M 21 15 C 17.686 15 15 17.686 15 21 C 15 24.314 17.686 27 21 27 C 24.314 27 27 24.314 27 21 C 27 17.686 24.314 15 21 15 Z M 18.8789 17.877 C 19.1348 17.877 19.3909 17.9764 19.5859 18.1719 L 23.8281 22.4141 C 24.2191 22.8051 24.2191 23.4381 23.8281 23.8281 C 23.4381 24.2191 22.8051 24.2191 22.4141 23.8281 L 18.1719 19.5859 C 17.7809 19.1949 17.7819 18.5619 18.1719 18.1719 C 18.3674 17.9764 18.623 17.877 18.8789 17.877 Z&quot;;" styleClass="save" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="med_delete" contentDisplay="TOP" prefHeight="47.0" prefWidth="126.0" ripplerFill="#ffb8b8" styleClass="delete-button" text="DELETE MED" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Nirmala UI Bold" size="12.0" />
+                           </font>
+                           <graphic>
+                              <AnchorPane prefHeight="18.0" prefWidth="18.0" styleClass="delete" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../Styles.css" />
+      <URL value="@../../../FormStyle.css" />
+   </stylesheets>
+</AnchorPane>

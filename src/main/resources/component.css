@@ -1,0 +1,46 @@
+#anchor
+{
+    -fx-background-color: linear-gradient(to bottom right, #2b5876 , #4e4376);
+}
+.text-area
+{
+    /*-fx-background-color: steelblue;*/
+
+
+    /* top-left, top-right, bottom-right, and bottom-left corners, in that
+    order. */
+}
+.label
+{
+    -fx-text-fill: white;
+    -fx-fill: #ffffff;
+    //-fx-effect: innershadow( three-pass-box , #a3a3da, 6, 0.0 , 0 , 2 );
+}
+.button
+{
+    -fx-background-color: #61a2b1;
+    -fx-font-size: 12px;
+    -fx-text-fill: white;
+}
+.button:hover {
+    -fx-background-color: linear-gradient(#2A5058, #61a2b1);
+}
+
+.choice-box, .date-picker
+{
+   -fx-background-color: #61a2b1;
+}
+.date-picker-popup  {
+    -fx-border-color: white;
+}
+.date-picker .cell {
+    -fx-background-color: #4e4376;
+}
+.date-picker .arrow-button {
+    -fx-background-color: #61a2b1;
+    -fx-background-radius: 0;
+}
+
+.date-picker .arrow-button .arrow {
+    -fx-background-color: #4e4376;
+}

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="647.0" prefWidth="591.0" styleClass="parent" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="69.0" prefHeight="474.0" prefWidth="571.0" styleClass="box" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="70.0">
+         <children>
+            <AnchorPane layoutY="8.0" prefHeight="51.0" prefWidth="570.0" styleClass="title" AnchorPane.bottomAnchor="399.2" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="12.0" layoutY="15.0" styleClass="medium" text="Informations des interventions" />
+               </children>
+            </AnchorPane>
+            <GridPane layoutY="54.0" prefHeight="419.0" prefWidth="549.0" styleClass="content" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+               <columnConstraints>
+                  <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" maxWidth="302.4000030517578" minWidth="10.0" prefWidth="177.6" />
+                  <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" maxWidth="391.1999877929687" minWidth="10.0" prefWidth="390.4" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="BASELINE" vgrow="ALWAYS" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="BASELINE" vgrow="ALWAYS" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="BASELINE" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="78.599951171875" minHeight="10.0" prefHeight="69.79996337890626" valignment="BASELINE" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="97.80002441406253" minHeight="10.0" prefHeight="97.00003662109378" valignment="BASELINE" vgrow="ALWAYS" />
+               </rowConstraints>
+               <children>
+                  <Label styleClass="small" text="ID intervention" />
+                  <Label styleClass="small" text="Date prévue" GridPane.rowIndex="1" />
+                  <Label styleClass="small" text="Date réelle" GridPane.rowIndex="2" />
+                  <AnchorPane GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets right="10.0" />
+                     </GridPane.margin>
+                     <children>
+                        <TextField fx:id="idIntervention" layoutY="18.0" prefHeight="44.0" prefWidth="380.0" promptText="ID intervention" AnchorPane.topAnchor="18.0" />
+                        <Label fx:id="id" layoutX="1.0" layoutY="61.0" prefHeight="18.0" prefWidth="259.0" style="-fx-padding: 0;" text="Veuillez entrer l'Id intervention" textFill="#9e9e9e" AnchorPane.bottomAnchor="0.6000000000000014" AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="61.0">
+                           <font>
+                              <Font name="Nirmala UI" size="12.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane fx:id="erroricon" layoutX="363.40000000000003" layoutY="64.8" prefHeight="12.0" prefWidth="10.0" style="-fx-shape: &quot;m 18.581 2.14 l -6.265 -2.089 a 1 1 0 0 0 -0.632 0 l -6.266 2.089 a 4.993 4.993 0 0 0 -3.418 4.743 v 5.117 c 0 7.563 9.2 11.74 9.594 11.914 a 1 1 0 0 0 0.812 0 c 0.394 -0.174 9.594 -4.351 9.594 -11.914 v -5.117 a 4.993 4.993 0 0 0 -3.419 -4.743 Z m -6.581 16.86 a 1 1 0 1 1 1 -1 a 1 1 0 0 1 -1 1 Z m 1 -5 a 1 1 0 0 1 -2 0 v -8 a 1 1 0 0 1 2 0 Z&quot;; -fx-background-color: red;" visible="false" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="7.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="81.0" prefWidth="347.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets right="10.0" />
+                     </GridPane.margin>
+                     <children>
+                        <DatePicker fx:id="datePrévueIntervention" prefHeight="44.0" prefWidth="380.0" promptText="Date prévue" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="18.0" />
+                        <Label fx:id="datePrev" prefHeight="18.0" prefWidth="259.0" style="-fx-padding: 0;" text="Veuillez entrer la Date prévu de l'intervention" textFill="#9e9e9e" AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="61.0">
+                           <font>
+                              <Font name="Nirmala UI" size="12.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane fx:id="erroricon1" layoutX="365.6" layoutY="64.8" prefHeight="12.0" prefWidth="10.0" style="-fx-shape: &quot;m 18.581 2.14 l -6.265 -2.089 a 1 1 0 0 0 -0.632 0 l -6.266 2.089 a 4.993 4.993 0 0 0 -3.418 4.743 v 5.117 c 0 7.563 9.2 11.74 9.594 11.914 a 1 1 0 0 0 0.812 0 c 0.394 -0.174 9.594 -4.351 9.594 -11.914 v -5.117 a 4.993 4.993 0 0 0 -3.419 -4.743 Z m -6.581 16.86 a 1 1 0 1 1 1 -1 a 1 1 0 0 1 -1 1 Z m 1 -5 a 1 1 0 0 1 -2 0 v -8 a 1 1 0 0 1 2 0 Z&quot;; -fx-background-color: red;" visible="false" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="32.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets right="10.0" />
+                     </GridPane.margin>
+                     <children>
+                        <DatePicker fx:id="dateRéelleIntervention" prefHeight="44.0" prefWidth="380.0" promptText="Date réelle" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="18.0" />
+                        <Label fx:id="dateR" prefHeight="18.0" prefWidth="259.0" style="-fx-padding: 0;" text="Veuillez entrer la Date réelle de l'intervention" textFill="#9e9e9e" AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="61.0">
+                           <font>
+                              <Font name="Nirmala UI" size="12.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane fx:id="erroricon2" prefHeight="12.0" prefWidth="10.0" style="-fx-shape: &quot;m 18.581 2.14 l -6.265 -2.089 a 1 1 0 0 0 -0.632 0 l -6.266 2.089 a 4.993 4.993 0 0 0 -3.418 4.743 v 5.117 c 0 7.563 9.2 11.74 9.594 11.914 a 1 1 0 0 0 0.812 0 c 0.394 -0.174 9.594 -4.351 9.594 -11.914 v -5.117 a 4.993 4.993 0 0 0 -3.419 -4.743 Z m -6.581 16.86 a 1 1 0 1 1 1 -1 a 1 1 0 0 1 -1 1 Z m 1 -5 a 1 1 0 0 1 -2 0 v -8 a 1 1 0 0 1 2 0 Z&quot;; -fx-background-color: red;" visible="false" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="22.0" />
+                     </children>
+                  </AnchorPane>
+                  <Label styleClass="small" text="Etat RV" GridPane.rowIndex="3" />
+                  <AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <GridPane layoutX="4.0" layoutY="25.0" prefHeight="30.0" prefWidth="325.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="190.20001220703125" minWidth="10.0" prefWidth="95.2000244140625" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="287.7999954223633" minWidth="10.0" prefWidth="231.19997558593752" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <JFXRadioButton fx:id="actifRB" selected="true" text="Actif">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="etatRV" />
+                                 </toggleGroup>
+                                 <selectedColor>
+                                    <Color green="0.8315789699554443" blue="0.41578948497772217" />
+                                 </selectedColor>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="términéRB" text="Términé" toggleGroup="$etatRV" GridPane.columnIndex="1">
+                                 <selectedColor>
+                                    <Color red="1.0" green="0.27037036418914795" blue="0.27037036418914795" />
+                                 </selectedColor>
+                              </JFXRadioButton>
+                           </children>
+                        </GridPane>
+                        <Label fx:id="dateR1" layoutX="3.0" layoutY="54.0" prefHeight="18.0" prefWidth="259.0" style="-fx-padding: 0;" text="Veuillez choisir une état" textFill="#9e9e9e">
+                           <font>
+                              <Font name="Nirmala UI" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Label prefHeight="38.0" prefWidth="121.0" styleClass="small" text="Catégorie" GridPane.rowIndex="4" />
+                  <AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets right="10.0" />
+                     </GridPane.margin>
+                     <children>
+                        <JFXComboBox fx:id="typesInterventions" focusColor="#0073ff" labelFloat="true" prefHeight="42.0" prefWidth="380.0" promptText="Catégorie" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="18.0" />
+                        <Label fx:id="categorie" layoutX="1.0" layoutY="65.0" prefHeight="18.0" prefWidth="259.0" style="-fx-padding: 0;" text="Veuillez choisir la catégorie de l'intervention" textFill="#9e9e9e" AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="65.0">
+                           <font>
+                              <Font name="Nirmala UI" size="12.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane fx:id="erroricon3" layoutX="367.6" layoutY="67.4" prefHeight="12.0" prefWidth="10.0" style="-fx-shape: &quot;m 18.581 2.14 l -6.265 -2.089 a 1 1 0 0 0 -0.632 0 l -6.266 2.089 a 4.993 4.993 0 0 0 -3.418 4.743 v 5.117 c 0 7.563 9.2 11.74 9.594 11.914 a 1 1 0 0 0 0.812 0 c 0.394 -0.174 9.594 -4.351 9.594 -11.914 v -5.117 a 4.993 4.993 0 0 0 -3.419 -4.743 Z m -6.581 16.86 a 1 1 0 1 1 1 -1 a 1 1 0 0 1 -1 1 Z m 1 -5 a 1 1 0 0 1 -2 0 v -8 a 1 1 0 0 1 2 0 Z&quot;; -fx-background-color: red;" visible="false" AnchorPane.bottomAnchor="19.0" AnchorPane.rightAnchor="22.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="13.0" layoutY="559.0" prefHeight="79.0" prefWidth="310.0" style="-fx-background-color: #673AB7; -fx-background-radius: 8px;" AnchorPane.bottomAnchor="8.799999999999997" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="267.6">
+         <children>
+            <Label layoutX="20.0" layoutY="43.0" style="-fx-font-size: 12px;" styleClass="short" text="Prix de l'intervention" textFill="WHITE" />
+            <Label fx:id="prixIntervention" layoutX="19.0" layoutY="17.0" styleClass="big" text="000,00 Dhs" textFill="WHITE" />
+            <AnchorPane layoutX="266.0" layoutY="24.0" prefHeight="26.0" prefWidth="26.0" style="-fx-shape: &quot;M 13 1 L 13 4 L 9 4 L 9 6 L 13 6 L 13 9 L 17 5 L 13 1 Z M 5.41406 1.99609 L 2.00391 2.01367 L 2.01367 4.01367 L 4.08398 4.00391 L 7.37891 11.9082 L 6.18164 13.8242 C 5.78164 14.4642 5.76095 15.2726 6.12695 15.9316 C 6.49295 16.5906 7.18741 17 7.94141 17 L 20 17 L 20 15 L 7.94141 15 L 7.87695 14.8828 L 9.05273 13 L 16.5215 13 C 17.2485 13 17.9175 12.6067 18.2695 11.9727 L 22.3828 4.56641 L 20.6348 3.5957 L 16.5215 11 L 9.16602 11 L 5.41406 1.99609 Z M 8 18 A 2 2 0 0 0 6 20 A 2 2 0 0 0 8 22 A 2 2 0 0 0 10 20 A 2 2 0 0 0 8 18 Z M 18 18 A 2 2 0 0 0 16 20 A 2 2 0 0 0 18 22 A 2 2 0 0 0 20 20 A 2 2 0 0 0 18 18 Z&quot;; -fx-background-color: #B39CDB;" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="15.0" />
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="sauvegarder" contentDisplay="TOP" layoutX="437.8" layoutY="572.6" prefHeight="50.0" prefWidth="143.0" ripplerFill="#290099" styleClass="save-button" text="SAVE CHANGES" textFill="WHITE" AnchorPane.bottomAnchor="24.0" AnchorPane.rightAnchor="10.0">
+         <font>
+            <Font name="Nirmala UI Bold" size="12.0" />
+         </font>
+         <graphic>
+            <AnchorPane prefHeight="18.0" prefWidth="18.0" styleClass="save" />
+         </graphic>
+      </JFXButton>
+      <AnchorPane layoutX="10.0" layoutY="7.0" prefHeight="51.0" prefWidth="569.0" styleClass="title" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Label layoutX="12.0" layoutY="10.0" styleClass="big" text="Gestion des interventions" />
+            <HBox layoutX="269.0" layoutY="18.0" prefHeight="18.0" prefWidth="298.0" spacing="10.0">
+               <children>
+                  <JFXButton prefHeight="11.0" prefWidth="12.0" style="-fx-shape: &quot;M 25 1.05078 C 24.7825 1.05078 24.5659 1.11977 24.3809 1.25977 L 1.38086 19.2109 C 0.950859 19.5509 0.870937 20.1791 1.21094 20.6191 C 1.55094 21.0491 2.17914 21.1291 2.61914 20.7891 L 4 19.7109 L 4 46 C 4 46.55 4.45 47 5 47 L 19 47 L 19 29 L 31 29 L 31 47 L 45 47 C 45.55 47 46 46.55 46 46 L 46 19.7109 L 47.3809 20.7891 C 47.5709 20.9291 47.78 21 48 21 C 48.3 21 48.5891 20.8691 48.7891 20.6191 C 49.1291 20.1791 49.0491 19.5509 48.6191 19.2109 L 25.6191 1.25977 C 25.4341 1.11977 25.2175 1.05078 25 1.05078 Z M 35 5 L 35 6.05078 L 41 10.7305 L 41 5 L 35 5 Z&quot;; -fx-background-color: rgb(103, 58, 183);" text="." textFill="TRANSPARENT">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="2.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <AnchorPane prefHeight="8.0" prefWidth="4.0" style="-fx-shape: &quot;M 14.9805 2.98047 C 14.1641 2.98047 13.4336 3.47656 13.1289 4.23047 C 12.8203 4.98438 13.0039 5.84766 13.5859 6.41406 L 32.1719 25 L 13.5859 43.5859 C 13.0625 44.0859 12.8516 44.832 13.0352 45.5352 C 13.2188 46.2344 13.7656 46.7813 14.4648 46.9648 C 15.168 47.1484 15.9141 46.9375 16.4141 46.4141 L 36.4141 26.4141 C 37.1953 25.6328 37.1953 24.3672 36.4141 23.5859 L 16.4141 3.58594 C 16.0352 3.19922 15.5195 2.98047 14.9805 2.98047 Z&quot;; -fx-background-color: rgb(158, 158, 158);">
+                     <HBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </HBox.margin>
+                  </AnchorPane>
+                  <Label text="Patient">
+                     <font>
+                        <Font name="Nirmala UI Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane prefHeight="8.0" prefWidth="4.0" style="-fx-shape: &quot;M 14.9805 2.98047 C 14.1641 2.98047 13.4336 3.47656 13.1289 4.23047 C 12.8203 4.98438 13.0039 5.84766 13.5859 6.41406 L 32.1719 25 L 13.5859 43.5859 C 13.0625 44.0859 12.8516 44.832 13.0352 45.5352 C 13.2188 46.2344 13.7656 46.7813 14.4648 46.9648 C 15.168 47.1484 15.9141 46.9375 16.4141 46.4141 L 36.4141 26.4141 C 37.1953 25.6328 37.1953 24.3672 36.4141 23.5859 L 16.4141 3.58594 C 16.0352 3.19922 15.5195 2.98047 14.9805 2.98047 Z&quot;; -fx-background-color: rgb(158, 158, 158);">
+                     <HBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </HBox.margin>
+                  </AnchorPane>
+                  <Label style="-fx-font-weight: bold;" text="Fiche Médicale" textFill="#999999" />
+                  <AnchorPane layoutX="112.0" layoutY="15.0" prefHeight="8.0" prefWidth="4.0" style="-fx-shape: &quot;M 14.9805 2.98047 C 14.1641 2.98047 13.4336 3.47656 13.1289 4.23047 C 12.8203 4.98438 13.0039 5.84766 13.5859 6.41406 L 32.1719 25 L 13.5859 43.5859 C 13.0625 44.0859 12.8516 44.832 13.0352 45.5352 C 13.2188 46.2344 13.7656 46.7813 14.4648 46.9648 C 15.168 47.1484 15.9141 46.9375 16.4141 46.4141 L 36.4141 26.4141 C 37.1953 25.6328 37.1953 24.3672 36.4141 23.5859 L 16.4141 3.58594 C 16.0352 3.19922 15.5195 2.98047 14.9805 2.98047 Z&quot;; -fx-background-color: rgb(158, 158, 158);">
+                     <HBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </HBox.margin>
+                  </AnchorPane>
+                  <Label layoutX="132.0" layoutY="10.0" style="-fx-font-weight: bold;" text="Interventions" textFill="#999999" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../FormStyle.css" />
+      <URL value="@../../../Styles.css" />
+   </stylesheets>
+</AnchorPane>

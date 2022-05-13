@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="region" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="276.0" prefWidth="382.0" style="-fx-background-color: white; -fx-background-radius: 20px;" stylesheets="@../../../myAlert.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane fx:id="panel" layoutX="10.0" style="-fx-background-radius: 20px; -fx-border-radius: 20px; -fx-border-color: #EEEEEE;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="back1" layoutX="3.0" layoutY="204.0" opacity="0.39" prefHeight="55.0" prefWidth="379.0" style="-fx-shape: &quot;M 0 568 L 11.5 552.8 C 23 537.7 46 507.3 69 477 C 92 446.7 115 416.3 138.2 422.2 C 161.3 428 184.7 470 207.8 492.8 C 231 515.7 254 519.3 277 500.2 C 300 481 323 439 346 421.5 C 369 404 392 411 415.2 426.8 C 438.3 442.7 461.7 467.3 484.8 484.3 C 508 501.3 531 510.7 554 503.3 C 577 496 600 472 623 466.5 C 646 461 669 474 692.2 489.3 C 715.3 504.7 738.7 522.3 761.8 508.7 C 785 495 808 450 831 445.8 C 854 441.7 877 478.3 888.5 496.7 L 900 515 L 900 601 L 888.5 601 C 877 601 854 601 831 601 C 808 601 785 601 761.8 601 C 738.7 601 715.3 601 692.2 601 C 669 601 646 601 623 601 C 600 601 577 601 554 601 C 531 601 508 601 484.8 601 C 461.7 601 438.3 601 415.2 601 C 392 601 369 601 346 601 C 323 601 300 601 277 601 C 254 601 231 601 207.8 601 C 184.7 601 161.3 601 138.2 601 C 115 601 92 601 69 601 C 46 601 23 601 11.5 601 L 0 601 Z&quot;;" AnchorPane.bottomAnchor="15.9" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <AnchorPane layoutX="153.0" layoutY="198.0">
+               <children>
+                  <JFXButton fx:id="okBtn" prefHeight="10.0" prefWidth="72.0" ripplerFill="#ff5656" text="OK" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="1.0" green="0.25999999046325684" blue="0.25999999046325684" opacity="0.5761986374855042" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </AnchorPane>
+            <Label id="warningTxt" fx:id="title" alignment="CENTER" layoutX="10.0" layoutY="116.0" prefHeight="31.0" prefWidth="362.0" text="Error" textAlignment="CENTER" textFill="#ff0004" wrapText="true">
+               <font>
+                  <Font name="Calibri Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="message" alignment="CENTER" layoutX="8.0" layoutY="143.0" prefHeight="45.0" prefWidth="362.0" style="-fx-font-weight: bold;" text="This is an error message" textAlignment="CENTER" textFill="#6f829c" wrapText="true">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="icone" layoutX="141.0" layoutY="14.0">
+               <image>
+                  <Image url="@../../../Icones/error.png" />
+               </image>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </ImageView>
+            <Line endX="169.80001831054688" layoutX="190.0" layoutY="188.0" opacity="0.18" startX="-169.39999389648438" />
+            <AnchorPane fx:id="close" layoutX="340.0" prefHeight="26.0" prefWidth="42.0" style="-fx-background-radius: 0 20px 0 0;" styleClass="close">
+               <children>
+                  <Pane layoutX="15.0" layoutY="9.0" prefHeight="10.0" prefWidth="10.0" style="-fx-shape: &quot;M301.258,256.01L502.645,54.645c12.501-12.501,12.501-32.769,0-45.269c-12.501-12.501-32.769-12.501-45.269,0l0,0   L256.01,210.762L54.645,9.376c-12.501-12.501-32.769-12.501-45.269,0s-12.501,32.769,0,45.269L210.762,256.01L9.376,457.376   c-12.501,12.501-12.501,32.769,0,45.269s32.769,12.501,45.269,0L256.01,301.258l201.365,201.387   c12.501,12.501,32.769,12.501,45.269,0c12.501-12.501,12.501-32.769,0-45.269L301.258,256.01z&quot;;" styleClass="cls" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="back2" layoutX="3.0" layoutY="217.0" opacity="0.39" prefHeight="10.0" prefWidth="378.0" style="-fx-background-radius: 0 0 20px 20px;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="258.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,91 @@
+.button{
+    -fx-font-size:14px;
+    -fx-font-weight:bold;
+    -fx-background-color: #fe2e1a;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-text-fill: #F2F5FA;
+    -fx-cursor:hand;
+}
+
+.button:hover{
+    -fx-font-size:14px;
+    -fx-font-weight:bold;
+    -fx-border-color: #fe2e1a;
+    -fx-background-color: white;
+    -fx-text-fill: #fe2e1a;
+}
+.close .cls{
+    -fx-background-color: #6F829C;
+}
+.close:hover{
+    -fx-background-color: #fe2e1a;
+}
+.close:hover .cls{
+    -fx-background-color: white;
+}
+
+#errorBtn{
+    -fx-background-color: #fe2e1a;
+    -fx-effect: dropshadow(three-pass-box, rgba(240, 41, 41, 0.45), 10, 0.5, 0.0, 0.0);
+}
+#errorBtn:hover{
+    -fx-font-size:14px;
+    -fx-font-weight:bold;
+    -fx-border-color: #fe2e1a;
+    -fx-text-fill: #fe2e1a;
+    -fx-background-color: white;
+}
+
+#warningBtn{
+    -fx-background-color: #FFC107;
+    -fx-effect: dropshadow(three-pass-box, rgba(240, 213, 41, 0.45), 10, 0.5, 0.0, 0.0);
+}
+#warningBtn:hover{    
+    -fx-font-size:14px;
+    -fx-font-weight:bold;
+    -fx-border-color: #FFC107;
+    -fx-text-fill: #FFC107;
+    -fx-background-color: white;
+}
+
+#checkBtn{
+    -fx-background-color: #69F0AE;
+    -fx-effect: dropshadow(three-pass-box, rgb(137, 240, 41), 10, 0.5, 0.0, 0.0);
+}
+#checkBtn:hover{    
+    -fx-font-size:14px;
+    -fx-font-weight:bold;
+    -fx-border-color: #69F0AE;
+    -fx-text-fill: #69F0AE;
+    -fx-background-color: white;
+}
+
+#error{
+    -fx-background-color:#F5E7E8;
+}
+#warning{
+    -fx-background-color:#fff8df;
+}
+#check{
+    -fx-background-color:#daffec;
+}
+
+#errorTxt{
+    -fx-text-fill:red;
+}
+#warningTxt{
+    -fx-text-fill:#FFC107;
+}
+#checkTxt{
+    -fx-text-fill:#1eff00;
+}
+
+.success{
+    -fx-background-color:#00E676;
+    -fx-border-radius:6px;
+}
+.success .check{
+    -fx-background-color:white;
+    -fx-shape:"M 7.67969 0.957031 C 4.09766 0.855469 1.10547 3.69141 1.00391 7.27344 C 0.902344 10.8555 3.73828 13.8516 7.32031 13.9531 C 10.9023 14.0508 13.8984 11.2188 14 7.63281 C 14.0195 6.88281 13.9063 6.16016 13.6875 5.48438 L 12.8633 6.26172 C 12.9609 6.69531 13.0117 7.14453 13 7.60938 C 12.9141 10.6406 10.3789 13.0352 7.34766 12.9531 C 4.31641 12.8672 1.91797 10.332 2 7.30078 C 2.08594 4.26953 4.62109 1.87109 7.65234 1.95313 C 8.64453 1.98438 9.56641 2.27734 10.3594 2.76563 L 11.1094 2.05469 C 10.125 1.39844 8.95313 0.992188 7.67969 0.957031 Z M 12.5 2.79297 L 6.5 8.79297 L 4.85156 7.14844 L 4.5 6.79297 L 3.79297 7.5 L 4.14844 7.85156 L 6.5 10.207 L 13.207 3.5 Z";
+}

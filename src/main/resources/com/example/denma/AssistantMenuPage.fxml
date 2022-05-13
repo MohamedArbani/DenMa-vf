@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="674.0" prefWidth="998.0" stylesheets="@../../../FormStyle.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <TabPane fx:id="tabPane" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="615.0" prefWidth="992.0" side="LEFT" stylesheets="@../../../tabStyle.css" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+               <tabs>
+                  <Tab>
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="391.0" prefWidth="559.0" styleClass="DesktopPannel">
+                           <children>
+                              <TableView fx:id="table_patientsAttente" layoutX="13.0" layoutY="170.0" prefHeight="414.0" prefWidth="908.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="170.0">
+                                 <columns>
+                                    <TableColumn fx:id="col_NumeroRole" minWidth="-Infinity" prefWidth="108.7999849319458" text="Numero Role" />
+                                    <TableColumn fx:id="col_nom0" minWidth="-Infinity" prefWidth="161.6000213623047" text="Nom" />
+                                    <TableColumn fx:id="col_prenom0" minWidth="-Infinity" prefWidth="155.2000732421875" text="Prenom" />
+                                    <TableColumn fx:id="col_couverture0" minWidth="-Infinity" prefWidth="237.0" text="Couverture medicale" />
+                                    <TableColumn fx:id="col_typeCouverture0" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="240.79996337890623" text="Type couverture" />
+                                 </columns>
+                              </TableView>
+                              <Label layoutX="14.0" layoutY="8.0" prefHeight="46.0" prefWidth="373.0" text="sale d'attente">
+                                 <font>
+                                    <Font name="Algerian" size="40.0" />
+                                 </font>
+                              </Label>
+                              <AnchorPane layoutX="14.0" layoutY="69.0" prefHeight="88.0" prefWidth="905.0" style="-fx-background-color: #F7FCFF; -fx-background-radius: 10px;" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="70.0">
+                                 <children>
+                                    <TextField fx:id="filterAttente" onKeyTyped="#tableFilterAttente" prefHeight="48.0" prefWidth="474.0" promptText="Recherche" style="-fx-background-color: white; -fx-background-radius: 2px;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="402.0" AnchorPane.topAnchor="20.0">
+                                       <padding>
+                                          <Insets left="40.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="Segoe UI" size="20.0" />
+                                       </font>
+                                    </TextField>
+                                    <JFXButton layoutX="34.0" layoutY="34.0" prefHeight="19.0" prefWidth="19.0" style="-fx-shape: &quot;M 504.352 459.061 l -99.435 -99.477 c 74.402 -99.427 54.115 -240.344 -45.312 -314.746 S 119.261 -9.277 44.859 90.15 S -9.256 330.494 90.171 404.896 c 79.868 59.766 189.565 59.766 269.434 0 l 99.477 99.477 c 12.501 12.501 32.769 12.501 45.269 0 c 12.501 -12.501 12.501 -32.769 0 -45.269 L 504.352 459.061 Z M 225.717 385.696 c -88.366 0 -160 -71.634 -160 -160 s 71.634 -160 160 -160 s 160 71.634 160 160 C 385.623 314.022 314.044 385.602 225.717 385.696 Z&quot;;" styleClass="notif" text=".">
+                                       <font>
+                                          <Font size="1.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <HBox layoutX="523.0" layoutY="20.0" prefHeight="46.0" prefWidth="370.0">
+                                       <children>
+                                          <JFXButton fx:id="ajouterNouveauPatientAttente" onAction="#ajouterNouveauPatientAttentePressed" prefHeight="59.0" prefWidth="133.0" ripplerFill="#00ff59" styleClass="addbtn" text="Add">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                             <graphic>
+                                                <JFXButton prefHeight="15.0" prefWidth="15.0" style="-fx-shape: &quot;M24 10.5 13.5 10.5 13.5 0 10.5 0 10.5 10.5 0 10.5 0 13.5 10.5 13.5 10.5 24 13.5 24 13.5 13.5 24 13.5 24 10.5&quot;; -fx-background-color: white;" styleClass="notif" text=".">
+                                                   <font>
+                                                      <Font size="1.0" />
+                                                   </font>
+                                                </JFXButton>
+                                             </graphic>
+                                             <padding>
+                                                <Insets right="6.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets right="20.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                          <JFXButton id="editbtn" fx:id="informationPatientAttente" onAction="#informationPatientAttentePressed" prefHeight="59.0" prefWidth="133.0" ripplerFill="#ad76ff" styleClass="addbtn" text="Info">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets right="6.0" />
+                                             </padding>
+                                             <graphic>
+                                                <JFXButton prefHeight="21.0" prefWidth="21.0" text=".">
+                                                   <font>
+                                                      <Font size="1.0" />
+                                                   </font>
+                                                   <graphic>
+                                                      <AnchorPane prefHeight="15.0" prefWidth="15.0">
+                                                         <children>
+                                                            <JFXButton prefHeight="15.0" prefWidth="15.0" style="-fx-shape: &quot;M 13 1.1875 C 6.47656 1.1875 1.1875 6.47656 1.1875 13 C 1.1875 19.5234 6.47656 24.8125 13 24.8125 C 19.5234 24.8125 24.8125 19.5234 24.8125 13 C 24.8125 6.47656 19.5234 1.1875 13 1.1875 Z M 15.4609 19.4961 C 14.8516 19.7344 14.3672 19.918 14.0039 20.043 C 13.6406 20.168 13.2227 20.2305 12.7422 20.2305 C 12.0078 20.2305 11.4336 20.0508 11.0234 19.6914 C 10.6172 19.3359 10.4141 18.8789 10.4141 18.3242 C 10.4141 18.1094 10.4297 17.8906 10.4609 17.668 C 10.4883 17.4414 10.5391 17.1914 10.6055 16.9063 L 11.3672 14.2188 C 11.4336 13.9609 11.4922 13.7188 11.5391 13.4883 C 11.5859 13.2578 11.6055 13.0469 11.6055 12.8555 C 11.6055 12.5156 11.5352 12.2734 11.3945 12.1406 C 11.25 12.0039 10.9805 11.9375 10.582 11.9375 C 10.3867 11.9375 10.1836 11.9688 9.97656 12.0273 C 9.76953 12.0898 9.59375 12.1484 9.44531 12.2031 L 9.64844 11.375 C 10.1445 11.1719 10.6211 11 11.0781 10.8555 C 11.5313 10.7109 11.9648 10.6367 12.3672 10.6367 C 13.0977 10.6367 13.6641 10.8164 14.0586 11.168 C 14.4531 11.5195 14.6523 11.9805 14.6523 12.543 C 14.6523 12.6602 14.6406 12.8672 14.6133 13.1602 C 14.5859 13.4531 14.5352 13.7227 14.4609 13.9727 L 13.7031 16.6523 C 13.6406 16.8672 13.5859 17.1133 13.5352 17.3867 C 13.4883 17.6602 13.4648 17.8711 13.4648 18.0117 C 13.4648 18.3672 13.543 18.6133 13.7031 18.7422 C 13.8594 18.8711 14.1367 18.9336 14.5313 18.9336 C 14.7148 18.9336 14.9219 18.9023 15.1563 18.8398 C 15.3867 18.7734 15.5547 18.7188 15.6602 18.668 Z M 15.3242 8.61719 C 14.9727 8.94531 14.5469 9.10938 14.0508 9.10938 C 13.5547 9.10938 13.125 8.94531 12.7695 8.61719 C 12.4141 8.28906 12.2383 7.89063 12.2383 7.42578 C 12.2383 6.96094 12.418 6.55859 12.7695 6.22656 C 13.125 5.89453 13.5547 5.73047 14.0508 5.73047 C 14.5469 5.73047 14.9727 5.89453 15.3242 6.22656 C 15.6797 6.55859 15.8555 6.96094 15.8555 7.42578 C 15.8555 7.89063 15.6797 8.28906 15.3242 8.61719 Z&quot;; -fx-background-color: white;" styleClass="notif" text=".">
+                                                               <font>
+                                                                  <Font size="1.0" />
+                                                               </font>
+                                                            </JFXButton>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </graphic>
+                                                   <padding>
+                                                      <Insets bottom="-4.0" right="-4.0" top="-4.0" />
+                                                   </padding>
+                                                </JFXButton>
+                                             </graphic>
+                                             <HBox.margin>
+                                                <Insets right="20.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                          <JFXButton id="deletebtn" onAction="#DeletePatientAttente" prefHeight="59.0" prefWidth="133.0" ripplerFill="#ffb2b2" styleClass="addbtn" text="Delete">
+                                             <font>
+                                                <Font name="Segoe UI" size="20.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets right="6.0" />
+                                             </padding>
+                                             <graphic>
+                                                <JFXButton prefHeight="17.0" prefWidth="15.0" style="-fx-shape: &quot;M 17 4 V 2 a 2 2 0 0 0 -2 -2 H 9 A 2 2 0 0 0 7 2 V 4 H 2 V 6 H 4 V 21 a 3 3 0 0 0 3 3 H 17 a 3 3 0 0 0 3 -3 V 6 h 2 V 4 Z M 11 17 H 9 V 11 h 2 Z m 4 0 H 13 V 11 h 2 Z M 15 4 H 9 V 2 h 6 Z&quot;; -fx-background-color: white;" styleClass="notif" text=".">
+                                                   <font>
+                                                      <Font size="1.0" />
+                                                   </font>
+                                                </JFXButton>
+                                             </graphic>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                             <effect>
+                                                <DropShadow height="54.42" radius="24.62" width="46.06">
+                                                   <color>
+                                                      <Color red="1.0" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </JFXButton>
+                                       </children>
+                                    </HBox>
+                                    <MenuButton fx:id="menuAttente" alignment="CENTER" layoutX="461.0" layoutY="28.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="34.0" styleClass="filtre-bouton" AnchorPane.rightAnchor="411.0">
+                                       <font>
+                                          <Font size="4.0" />
+                                       </font>
+                                       <items>
+                                          <MenuItem mnemonicParsing="false" onAction="#setchoiceNumeroRole" text="NumeroRole" />
+                                          <MenuItem mnemonicParsing="false" onAction="#setAChoiceNom" text="nom" />
+                                          <MenuItem mnemonicParsing="false" onAction="#setAChoicePrenom" text="prenom" />
+                                          <MenuItem mnemonicParsing="false" onAction="#setAChoiceCIN" text="cin" />
+                                       </items>
+                                    </MenuButton>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../chaise.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Tab>
+                  <Tab>
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="391.0" prefWidth="559.0" styleClass="DesktopPannel">
+                           <children>
+                              <TableView fx:id="table_patients" layoutX="10.0" layoutY="158.0" prefHeight="432.0" prefWidth="913.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="170.0">
+                                 <columns>
+                                    <TableColumn fx:id="col_idPatient" prefWidth="128.0" text="idPatient" />
+                                    <TableColumn fx:id="col_nom" minWidth="0.0" prefWidth="147.20005798339844" text="Nom" />
+                                    <TableColumn fx:id="col_prenom" minWidth="0.0" prefWidth="136.7999267578125" text="Prenom" />
+                                    <TableColumn fx:id="col_cin" minWidth="0.0" prefWidth="127.99993896484375" text="CIN" />
+                                    <TableColumn fx:id="col_dateNaissance" maxWidth="1.7976931348623157E308" minWidth="0.0" prefWidth="139.20001220703125" text="date de naissance" />
+                                    <TableColumn fx:id="col_actions" minWidth="0.0" prefWidth="227.199951171875" text="actions" />
+                                 </columns>
+                              </TableView>
+                              <Label layoutX="14.0" layoutY="8.0" prefHeight="46.0" prefWidth="373.0" text="Patients">
+                                 <font>
+                                    <Font name="Algerian" size="40.0" />
+                                 </font>
+                              </Label>
+                              <AnchorPane layoutX="14.0" layoutY="59.0" prefHeight="88.0" prefWidth="905.0" style="-fx-background-color: #F7FCFF; -fx-background-radius: 10px;" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="70.0">
+                                 <children>
+                                    <TextField fx:id="filter" onKeyTyped="#tableFilter" prefHeight="48.0" prefWidth="474.0" promptText="Recherche" style="-fx-background-color: white; -fx-background-radius: 2px;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="402.0" AnchorPane.topAnchor="20.0">
+                                       <padding>
+                                          <Insets left="40.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="Segoe UI" size="20.0" />
+                                       </font>
+                                    </TextField>
+                                    <JFXButton layoutX="34.0" layoutY="34.0" prefHeight="19.0" prefWidth="19.0" style="-fx-shape: &quot;M 504.352 459.061 l -99.435 -99.477 c 74.402 -99.427 54.115 -240.344 -45.312 -314.746 S 119.261 -9.277 44.859 90.15 S -9.256 330.494 90.171 404.896 c 79.868 59.766 189.565 59.766 269.434 0 l 99.477 99.477 c 12.501 12.501 32.769 12.501 45.269 0 c 12.501 -12.501 12.501 -32.769 0 -45.269 L 504.352 459.061 Z M 225.717 385.696 c -88.366 0 -160 -71.634 -160 -160 s 71.634 -160 160 -160 s 160 71.634 160 160 C 385.623 314.022 314.044 385.602 225.717 385.696 Z&quot;;" styleClass="notif" text=".">
+                                       <font>
+                                          <Font size="1.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <HBox layoutX="523.0" layoutY="20.0" prefHeight="46.0" prefWidth="370.0">
+                                       <children>
+                                          <JFXButton fx:id="ajouterNouveauPatient" onAction="#ajouterNouveauPatientPressed" prefHeight="59.0" prefWidth="133.0" ripplerFill="#00ff59" styleClass="addbtn" text="Add">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                             <graphic>
+                                                <JFXButton prefHeight="15.0" prefWidth="15.0" style="-fx-shape: &quot;M24 10.5 13.5 10.5 13.5 0 10.5 0 10.5 10.5 0 10.5 0 13.5 10.5 13.5 10.5 24 13.5 24 13.5 13.5 24 13.5 24 10.5&quot;; -fx-background-color: white;" styleClass="notif" text=".">
+                                                   <font>
+                                                      <Font size="1.0" />
+                                                   </font>
+                                                </JFXButton>
+                                             </graphic>
+                                             <padding>
+                                                <Insets right="6.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets right="20.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                          <JFXButton id="editbtn" fx:id="informationPatient" onAction="#informationPatientPressed" prefHeight="59.0" prefWidth="133.0" ripplerFill="#ad76ff" styleClass="addbtn" text="Info">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets right="6.0" />
+                                             </padding>
+                                             <graphic>
+                                                <JFXButton prefHeight="21.0" prefWidth="21.0" text=".">
+                                                   <font>
+                                                      <Font size="1.0" />
+                                                   </font>
+                                                   <graphic>
+                                                      <AnchorPane prefHeight="15.0" prefWidth="15.0">
+                                                         <children>
+                                                            <JFXButton prefHeight="15.0" prefWidth="15.0" style="-fx-shape: &quot;M 13 1.1875 C 6.47656 1.1875 1.1875 6.47656 1.1875 13 C 1.1875 19.5234 6.47656 24.8125 13 24.8125 C 19.5234 24.8125 24.8125 19.5234 24.8125 13 C 24.8125 6.47656 19.5234 1.1875 13 1.1875 Z M 15.4609 19.4961 C 14.8516 19.7344 14.3672 19.918 14.0039 20.043 C 13.6406 20.168 13.2227 20.2305 12.7422 20.2305 C 12.0078 20.2305 11.4336 20.0508 11.0234 19.6914 C 10.6172 19.3359 10.4141 18.8789 10.4141 18.3242 C 10.4141 18.1094 10.4297 17.8906 10.4609 17.668 C 10.4883 17.4414 10.5391 17.1914 10.6055 16.9063 L 11.3672 14.2188 C 11.4336 13.9609 11.4922 13.7188 11.5391 13.4883 C 11.5859 13.2578 11.6055 13.0469 11.6055 12.8555 C 11.6055 12.5156 11.5352 12.2734 11.3945 12.1406 C 11.25 12.0039 10.9805 11.9375 10.582 11.9375 C 10.3867 11.9375 10.1836 11.9688 9.97656 12.0273 C 9.76953 12.0898 9.59375 12.1484 9.44531 12.2031 L 9.64844 11.375 C 10.1445 11.1719 10.6211 11 11.0781 10.8555 C 11.5313 10.7109 11.9648 10.6367 12.3672 10.6367 C 13.0977 10.6367 13.6641 10.8164 14.0586 11.168 C 14.4531 11.5195 14.6523 11.9805 14.6523 12.543 C 14.6523 12.6602 14.6406 12.8672 14.6133 13.1602 C 14.5859 13.4531 14.5352 13.7227 14.4609 13.9727 L 13.7031 16.6523 C 13.6406 16.8672 13.5859 17.1133 13.5352 17.3867 C 13.4883 17.6602 13.4648 17.8711 13.4648 18.0117 C 13.4648 18.3672 13.543 18.6133 13.7031 18.7422 C 13.8594 18.8711 14.1367 18.9336 14.5313 18.9336 C 14.7148 18.9336 14.9219 18.9023 15.1563 18.8398 C 15.3867 18.7734 15.5547 18.7188 15.6602 18.668 Z M 15.3242 8.61719 C 14.9727 8.94531 14.5469 9.10938 14.0508 9.10938 C 13.5547 9.10938 13.125 8.94531 12.7695 8.61719 C 12.4141 8.28906 12.2383 7.89063 12.2383 7.42578 C 12.2383 6.96094 12.418 6.55859 12.7695 6.22656 C 13.125 5.89453 13.5547 5.73047 14.0508 5.73047 C 14.5469 5.73047 14.9727 5.89453 15.3242 6.22656 C 15.6797 6.55859 15.8555 6.96094 15.8555 7.42578 C 15.8555 7.89063 15.6797 8.28906 15.3242 8.61719 Z&quot;; -fx-background-color: white;" styleClass="notif" text=".">
+                                                               <font>
+                                                                  <Font size="1.0" />
+                                                               </font>
+                                                            </JFXButton>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </graphic>
+                                                   <padding>
+                                                      <Insets bottom="-4.0" right="-4.0" top="-4.0" />
+                                                   </padding>
+                                                </JFXButton>
+                                             </graphic>
+                                             <HBox.margin>
+                                                <Insets right="20.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                       </children>
+                                    </HBox>
+                                    <MenuButton fx:id="menu" alignment="CENTER" layoutX="461.0" layoutY="28.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="34.0" styleClass="filtre-bouton" AnchorPane.rightAnchor="411.0">
+                                       <font>
+                                          <Font size="4.0" />
+                                       </font>
+                                       <items>
+                                          <MenuItem mnemonicParsing="false" onAction="#setChoiceNom" text="Nom" />
+                                          <MenuItem mnemonicParsing="false" onAction="#setChoicePrenom" text="Prenom" />
+                                          <MenuItem mnemonicParsing="false" onAction="#setChoiceCIN" text="CIN" />
+                                          <MenuItem mnemonicParsing="false" onAction="#setChoicetypeCouverture" text="typeCouverture" />
+                                       </items>
+                                    </MenuButton>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../chaise-de-dentiste.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Tab>
+                  <Tab fx:id="information" closable="false" disable="true">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="391.0" prefWidth="559.0" styleClass="DesktopPannel">
+                           <children>
+                              <Label layoutX="47.0" layoutY="52.0" prefHeight="17.0" prefWidth="107.0" text="Nom:" />
+                              <Label layoutX="339.0" layoutY="52.0" prefHeight="17.0" prefWidth="70.0" text="Prenom:" />
+                              <Label layoutX="47.0" layoutY="84.0" prefHeight="17.0" prefWidth="108.0" text="Sexe:" />
+                              <Label layoutX="47.0" layoutY="116.0" prefHeight="17.0" prefWidth="107.0" text="Date de Naissance:" />
+                              <Label layoutX="339.0" layoutY="84.0" prefHeight="17.0" prefWidth="69.0" text="CIN:" />
+                              <Label layoutX="47.0" layoutY="17.0" prefHeight="26.0" prefWidth="279.0" text="Informations Personnelles:">
+                                 <font>
+                                    <Font name="System Bold" size="17.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="nom" layoutX="155.0" layoutY="52.0" prefHeight="17.0" prefWidth="166.0" />
+                              <Label fx:id="sexe" layoutX="155.0" layoutY="84.0" prefHeight="17.0" prefWidth="166.0" />
+                              <Label fx:id="dateNaissance" layoutX="155.0" layoutY="116.0" prefHeight="17.0" prefWidth="166.0" />
+                              <Label fx:id="prenom" layoutX="455.0" layoutY="52.0" prefHeight="17.0" prefWidth="166.0" />
+                              <Label fx:id="cin" layoutX="455.0" layoutY="84.0" prefHeight="17.0" prefWidth="166.0" />
+                              <Label layoutX="47.0" layoutY="190.0" prefHeight="17.0" prefWidth="107.0" text="Debut Soin:" />
+                              <Label layoutX="339.0" layoutY="190.0" prefHeight="17.0" prefWidth="70.0" text="Fin Soin:" />
+                              <Label layoutX="47.0" layoutY="222.0" prefHeight="17.0" prefWidth="108.0" text="Prix Comptabilise:" />
+                              <Label layoutX="339.0" layoutY="222.0" prefHeight="17.0" prefWidth="69.0" text="Etat Acte:" />
+                              <Label layoutX="47.0" layoutY="155.0" prefHeight="26.0" prefWidth="279.0" text="Acte Medicale:">
+                                 <font>
+                                    <Font name="System Bold" size="17.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="debutSoin" layoutX="155.0" layoutY="190.0" prefHeight="17.0" prefWidth="166.0" />
+                              <Label fx:id="prixComptabilise" layoutX="155.0" layoutY="222.0" prefHeight="17.0" prefWidth="166.0" />
+                              <Label layoutX="155.0" layoutY="254.0" prefHeight="17.0" prefWidth="166.0" />
+                              <Label fx:id="finSoin" layoutX="455.0" layoutY="190.0" prefHeight="17.0" prefWidth="166.0" />
+                              <Label fx:id="etatActe" layoutX="455.0" layoutY="222.0" prefHeight="17.0" prefWidth="166.0" />
+                              <Label layoutX="47.0" layoutY="292.0" prefHeight="17.0" prefWidth="107.0" text="Date Prevue:" />
+                              <Label layoutX="339.0" layoutY="292.0" prefHeight="17.0" prefWidth="112.0" text="Date Reelle:" />
+                              <Label layoutX="47.0" layoutY="324.0" prefHeight="17.0" prefWidth="108.0" text="Etat RendezVous:" />
+                              <Label layoutX="339.0" layoutY="324.0" prefHeight="17.0" prefWidth="117.0" text="Type Intervention:" />
+                              <Label layoutX="47.0" layoutY="257.0" prefHeight="26.0" prefWidth="279.0" text="Intervention:">
+                                 <font>
+                                    <Font name="System Bold" size="17.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="datePrevue" layoutX="155.0" layoutY="292.0" prefHeight="17.0" prefWidth="166.0" />
+                              <Label fx:id="etatRendezVous" layoutX="155.0" layoutY="324.0" prefHeight="17.0" prefWidth="166.0" />
+                              <Label fx:id="dateReelle" layoutX="455.0" layoutY="292.0" prefHeight="17.0" prefWidth="166.0" />
+                              <Label fx:id="typeIntervention" layoutX="455.0" layoutY="324.0" prefHeight="17.0" prefWidth="166.0" />
+                              <Label layoutX="47.0" layoutY="397.0" prefHeight="17.0" prefWidth="116.0" text="Remarque Générale:" />
+                              <Label layoutX="339.0" layoutY="397.0" prefHeight="17.0" prefWidth="70.0" text="Date Radio:" />
+                              <Label layoutX="47.0" layoutY="429.0" prefHeight="17.0" prefWidth="113.0" text="Remarque négative:" />
+                              <Label layoutX="47.0" layoutY="461.0" prefHeight="17.0" prefWidth="107.0" text="Remarque Positive:" />
+                              <Label layoutX="339.0" layoutY="429.0" prefHeight="17.0" prefWidth="69.0" text="Type Radio:" />
+                              <Label layoutX="47.0" layoutY="362.0" prefHeight="26.0" prefWidth="279.0" text="Radio:">
+                                 <font>
+                                    <Font name="System Bold" size="17.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="remarqueGeneral" layoutX="155.0" layoutY="397.0" prefHeight="17.0" prefWidth="166.0" />
+                              <Label fx:id="remarqueNegative" layoutX="155.0" layoutY="429.0" prefHeight="17.0" prefWidth="166.0" />
+                              <Label fx:id="remarquePositive" layoutX="155.0" layoutY="461.0" prefHeight="17.0" prefWidth="166.0" />
+                              <Label fx:id="dateRadio" layoutX="455.0" layoutY="397.0" prefHeight="17.0" prefWidth="166.0" />
+                              <Label fx:id="typeRadio" layoutX="455.0" layoutY="429.0" prefHeight="17.0" prefWidth="166.0" />
+                              <Label layoutX="447.0" layoutY="116.0" prefHeight="17.0" prefWidth="166.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../patient.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </center>
+         <top>
+            <AnchorPane maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="70.0" prefWidth="993.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="894.0" layoutY="11.0" prefHeight="48.0" prefWidth="92.0" styleClass="profile">
+                     <children>
+                        <Button layoutX="59.0" layoutY="13.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="18.0" style="-fx-shape: &quot;M 9.66602 2 L 9.17578 4.52344 C 8.35161 4.83425 7.59479 5.26993 6.93164 5.81445 L 4.50781 4.97852 L 2.17188 9.02148 L 4.11328 10.709 C 4.03865 11.1672 4 11.5918 4 12 C 4 12.4088 4.03981 12.8326 4.11328 13.291 L 4.11328 13.293 L 2.17188 14.9805 L 4.50781 19.0215 L 6.92969 18.1875 C 7.5929 18.7323 8.35143 19.1656 9.17578 19.4766 L 9.66602 22 L 14.334 22 L 14.8242 19.4766 C 15.6489 19.1655 16.4049 18.7306 17.0684 18.1855 L 19.4922 19.0215 L 21.8262 14.9805 L 19.8867 13.291 C 19.9614 12.8328 20 12.4082 20 12 C 20 11.5925 19.9611 11.1684 19.8867 10.7109 L 19.8867 10.709 L 21.8281 9.01953 L 19.4922 4.97852 L 17.0703 5.8125 C 16.4071 5.26768 15.6486 4.83443 14.8242 4.52344 L 14.334 2 L 9.66602 2 Z M 11.3145 4 L 12.6855 4 L 13.0742 6 L 14.1172 6.39453 C 14.7459 6.63147 15.3107 6.95675 15.8008 7.35938 L 16.6641 8.06641 L 18.5859 7.40625 L 19.2715 8.5918 L 17.7363 9.92773 L 17.9121 11.0273 L 17.9121 11.0293 C 17.9733 11.4042 18 11.7188 18 12 C 18 12.2812 17.9733 12.5957 17.9121 12.9707 L 17.7344 14.0703 L 19.2695 15.4063 L 18.584 16.5938 L 16.6641 15.9316 L 15.7988 16.6406 C 15.3087 17.0432 14.7459 17.3685 14.1172 17.6055 L 14.1152 17.6055 L 13.0723 18 L 12.6836 20 L 11.3145 20 L 10.9258 18 L 9.88281 17.6055 C 9.25415 17.3685 8.68933 17.0432 8.19922 16.6406 L 7.33594 15.9336 L 5.41406 16.5938 L 4.72852 15.4082 L 6.26563 14.0703 L 6.08789 12.9746 L 6.08789 12.9727 C 6.02762 12.5961 6 12.2807 6 12 C 6 11.7188 6.02674 11.4043 6.08789 11.0293 L 6.26563 9.92969 L 4.72852 8.59375 L 5.41406 7.40625 L 7.33594 8.06836 L 8.19922 7.35938 C 8.68933 6.95675 9.25415 6.63147 9.88281 6.39453 L 10.9258 6 L 11.3145 4 Z M 12 8 C 9.80348 8 8 9.80348 8 12 C 8 14.1965 9.80348 16 12 16 C 14.1965 16 16 14.1965 16 12 C 16 9.80348 14.1965 8 12 8 Z M 12 10 C 13.1115 10 14 10.8885 14 12 C 14 13.1115 13.1115 14 12 14 C 10.8885 14 10 13.1115 10 12 C 10 10.8885 10.8885 10 12 10 Z&quot;;" styleClass="gear">
+                           <font>
+                              <Font size="1.0" />
+                           </font>
+                        </Button>
+                        <Pane layoutX="9.0" layoutY="7.0" prefHeight="34.0" prefWidth="36.0" style="-fx-background-radius: 30px; -fx-background-color: #E9492E;" styleClass="notifp">
+                           <children>
+                              <Pane layoutX="-1.0" prefHeight="34.0" prefWidth="36.0" style="-fx-background-radius: 30px; -fx-background-color: #E9492E;">
+                                 <children>
+                                    <ImageView fitHeight="28.0" fitWidth="29.0" layoutX="4.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../toppng.com-doctor-png-494x673-modified.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+                  <TextField layoutX="579.0" layoutY="13.0" prefHeight="43.0" prefWidth="302.0" promptText="Search" style="-fx-background-color: #F2F5FA;">
+                     <padding>
+                        <Insets left="40.0" />
+                     </padding>
+                  </TextField>
+                  <Pane layoutX="522.0" layoutY="14.0" prefHeight="41.0" prefWidth="43.0" style="-fx-background-radius: 20px; -fx-background-color: white; -fx-border-color: #88959E;" styleClass="notifp">
+                     <children>
+                        <JFXButton fx:id="notifBtn" layoutX="9.0" layoutY="6.0" prefHeight="28.0" prefWidth="25.0" style="-fx-shape: &quot;M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z&quot;;" styleClass="notif" text=".">
+                           <font>
+                              <Font size="1.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+                  <Label fx:id="CurrentPage" layoutX="113.0" layoutY="13.0" prefHeight="40.0" prefWidth="210.0" text="Assistant">
+                     <font>
+                        <Font name="Segoe UI Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="CurrentIcon" fitHeight="34.0" fitWidth="34.0" layoutX="76.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../icons8_nurse_60px.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton layoutX="589.0" layoutY="24.0" prefHeight="21.0" prefWidth="21.0" style="-fx-shape: &quot;M 504.352 459.061 l -99.435 -99.477 c 74.402 -99.427 54.115 -240.344 -45.312 -314.746 S 119.261 -9.277 44.859 90.15 S -9.256 330.494 90.171 404.896 c 79.868 59.766 189.565 59.766 269.434 0 l 99.477 99.477 c 12.501 12.501 32.769 12.501 45.269 0 c 12.501 -12.501 12.501 -32.769 0 -45.269 L 504.352 459.061 Z M 225.717 385.696 c -88.366 0 -160 -71.634 -160 -160 s 71.634 -160 160 -160 s 160 71.634 160 160 C 385.623 314.022 314.044 385.602 225.717 385.696 Z&quot;;" styleClass="notif" text=".">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                  </JFXButton>
+                  <Circle fx:id="c1" fill="#ff1f1f" layoutX="560.0" layoutY="20.0" radius="8.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" />
+                  <ImageView fx:id="CurrentIcon1" fitHeight="32.0" fitWidth="35.0" layoutX="19.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Icones/dentist_icon.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="CurrentPage1" layoutX="10.0" layoutY="43.0" prefHeight="22.0" prefWidth="50.0" text="DENTIST">
+                     <font>
+                        <Font name="Forte" size="12.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color green="0.1305263191461563" blue="0.3263157904148102" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.16510720551013947" green="0.5093307495117188" blue="0.8105263113975525" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

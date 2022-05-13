@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="751.0" prefWidth="898.0" styleClass="parent" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="248.0" layoutY="67.0" prefHeight="35.0" prefWidth="412.0" styleClass="medium" text="Veuillez completer la configuration initiale" textFill="RED">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
+      <Label layoutX="42.0" layoutY="713.0" style="-fx-font-weight: bold;" styleClass="small" text="DenMa ne pas fonctioner sans une BD créé sur MySQL!" textFill="RED" />
+      <AnchorPane layoutX="14.0" layoutY="11.0" prefHeight="54.0" prefWidth="717.0" styleClass="title" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+         <children>
+            <Label layoutX="20.0" layoutY="19.0" styleClass="big" text="Bienvenue à DenMa" AnchorPane.leftAnchor="12.0" AnchorPane.topAnchor="10.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="425.8" layoutY="324.0" prefHeight="354.0" prefWidth="458.0" styleClass="box" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="324.0">
+         <children>
+            <AnchorPane prefHeight="54.0" prefWidth="358.0" styleClass="title" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="20.0" layoutY="19.0" styleClass="medium" text="A propos de la clinique" AnchorPane.leftAnchor="12.0" AnchorPane.topAnchor="12.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <GridPane layoutX="1.0" layoutY="55.0" prefHeight="195.0" prefWidth="358.0" styleClass="content" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="55.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="223.20001220703125" minWidth="10.0" prefWidth="191.20001220703125" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="265.5999755859375" minWidth="10.0" prefWidth="264.79998779296875" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label styleClass="small" text="Nom du dentiste" />
+                  <Label layoutX="10.0" layoutY="17.0" styleClass="small" text="Nom de la clinique" GridPane.rowIndex="1" />
+                  <Label layoutX="10.0" layoutY="17.0" styleClass="small" text="Adresse de la clinique" GridPane.rowIndex="2" />
+                  <Label layoutX="10.0" layoutY="17.0" styleClass="small" text="Tél clinique" GridPane.rowIndex="3" />
+                  <AnchorPane prefHeight="61.0" prefWidth="243.0" GridPane.columnIndex="1">
+                     <children>
+                        <Label fx:id="id1" layoutX="1.0" layoutY="49.00000000000001" prefHeight="18.0" prefWidth="185.0" style="-fx-padding: 0;" text="Veuillez entrer le Nom de dentiste" textFill="#9e9e9e" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="1.0">
+                           <font>
+                              <Font name="Nirmala UI" size="12.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane fx:id="erroricon1" layoutX="204.6" layoutY="52.400000000000006" prefHeight="12.0" prefWidth="10.0" style="-fx-shape: &quot;m 18.581 2.14 l -6.265 -2.089 a 1 1 0 0 0 -0.632 0 l -6.266 2.089 a 4.993 4.993 0 0 0 -3.418 4.743 v 5.117 c 0 7.563 9.2 11.74 9.594 11.914 a 1 1 0 0 0 0.812 0 c 0.394 -0.174 9.594 -4.351 9.594 -11.914 v -5.117 a 4.993 4.993 0 0 0 -3.419 -4.743 Z m -6.581 16.86 a 1 1 0 1 1 1 -1 a 1 1 0 0 1 -1 1 Z m 1 -5 a 1 1 0 0 1 -2 0 v -8 a 1 1 0 0 1 2 0 Z&quot;; -fx-background-color: red;" visible="false" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="13.0" />
+                        <TextField id="textbox" fx:id="clinParam_dentiste" layoutY="5.0" promptText="Nom dentiste" style="-fx-font-size: 13px;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="66.0" prefWidth="110.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Label fx:id="id11" layoutX="1.0" layoutY="50.00000000000001" prefHeight="18.0" prefWidth="214.0" style="-fx-padding: 0;" text="Veuillez entrer le nom de votre clinique" textFill="#9e9e9e" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="1.0">
+                           <font>
+                              <Font name="Nirmala UI" size="12.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane fx:id="erroricon11" layoutX="205.6" layoutY="53.400000000000006" prefHeight="12.0" prefWidth="10.0" style="-fx-shape: &quot;m 18.581 2.14 l -6.265 -2.089 a 1 1 0 0 0 -0.632 0 l -6.266 2.089 a 4.993 4.993 0 0 0 -3.418 4.743 v 5.117 c 0 7.563 9.2 11.74 9.594 11.914 a 1 1 0 0 0 0.812 0 c 0.394 -0.174 9.594 -4.351 9.594 -11.914 v -5.117 a 4.993 4.993 0 0 0 -3.419 -4.743 Z m -6.581 16.86 a 1 1 0 1 1 1 -1 a 1 1 0 0 1 -1 1 Z m 1 -5 a 1 1 0 0 1 -2 0 v -8 a 1 1 0 0 1 2 0 Z&quot;; -fx-background-color: red;" visible="false" AnchorPane.bottomAnchor="9.0" AnchorPane.rightAnchor="12.0" />
+                        <TextField id="textbox" fx:id="clinParam_clinique" layoutY="5.0" prefHeight="30.0" prefWidth="218.0" promptText="Nom clinique" style="-fx-font-size: 13px;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="61.0" prefWidth="212.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <Label fx:id="id21" layoutX="1.0" layoutY="50.00000000000001" prefHeight="18.0" prefWidth="186.0" style="-fx-padding: 0;" text="Veuillez entrer l'adresse de clinique" textFill="#9e9e9e" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="1.0">
+                           <font>
+                              <Font name="Nirmala UI" size="12.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane fx:id="erroricon21" layoutX="205.6" layoutY="54.400000000000006" prefHeight="12.0" prefWidth="10.0" style="-fx-shape: &quot;m 18.581 2.14 l -6.265 -2.089 a 1 1 0 0 0 -0.632 0 l -6.266 2.089 a 4.993 4.993 0 0 0 -3.418 4.743 v 5.117 c 0 7.563 9.2 11.74 9.594 11.914 a 1 1 0 0 0 0.812 0 c 0.394 -0.174 9.594 -4.351 9.594 -11.914 v -5.117 a 4.993 4.993 0 0 0 -3.419 -4.743 Z m -6.581 16.86 a 1 1 0 1 1 1 -1 a 1 1 0 0 1 -1 1 Z m 1 -5 a 1 1 0 0 1 -2 0 v -8 a 1 1 0 0 1 2 0 Z&quot;; -fx-background-color: red;" visible="false" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="12.0" />
+                        <TextField id="textbox" fx:id="clinParam_adresse" layoutX="26.0" layoutY="10.0" promptText="Adresse clinique" style="-fx-font-size: 13px;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="8.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="66.0" prefWidth="173.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets right="10.0" />
+                     </GridPane.margin>
+                     <children>
+                        <TextField id="textbox" fx:id="clinParam_tel" prefHeight="43.0" prefWidth="254.0" promptText="Tele clinique" style="-fx-font-size: 13px;" />
+                        <Label fx:id="id211" layoutX="3.0" layoutY="44.0" prefHeight="18.0" prefWidth="188.0" style="-fx-padding: 0;" text="Veuillez entrer le tele de clinique" textFill="#9e9e9e">
+                           <font>
+                              <Font name="Nirmala UI" size="12.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane fx:id="erroricon211" layoutX="242.0" layoutY="47.0" prefHeight="12.0" prefWidth="10.0" style="-fx-shape: &quot;m 18.581 2.14 l -6.265 -2.089 a 1 1 0 0 0 -0.632 0 l -6.266 2.089 a 4.993 4.993 0 0 0 -3.418 4.743 v 5.117 c 0 7.563 9.2 11.74 9.594 11.914 a 1 1 0 0 0 0.812 0 c 0.394 -0.174 9.594 -4.351 9.594 -11.914 v -5.117 a 4.993 4.993 0 0 0 -3.419 -4.743 Z m -6.581 16.86 a 1 1 0 1 1 1 -1 a 1 1 0 0 1 -1 1 Z m 1 -5 a 1 1 0 0 1 -2 0 v -8 a 1 1 0 0 1 2 0 Z&quot;; -fx-background-color: red;" visible="false" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="initSaveButton" contentDisplay="TOP" layoutX="740.0" layoutY="690.0" prefHeight="50.0" prefWidth="143.0" ripplerFill="#290099" styleClass="save-button" text="SAVE CHANGES" textFill="WHITE">
+         <font>
+            <Font name="Nirmala UI Bold" size="12.0" />
+         </font>
+         <graphic>
+            <AnchorPane prefHeight="18.0" prefWidth="18.0" styleClass="save" />
+         </graphic>
+      </JFXButton>
+      <AnchorPane layoutX="16.0" layoutY="718.0" prefHeight="14.0" prefWidth="20.0" style="-fx-shape: &quot;M 16 6 C 10.4883 6 6 10.4883 6 16 C 6 21.5117 10.4883 26 16 26 C 21.5117 26 26 21.5117 26 16 C 26 10.4883 21.5117 6 16 6 Z M 5 7.375 C 3.13281 9.74609 2 12.75 2 16 C 2 19.25 3.13281 22.2539 5 24.625 L 6.5625 23.375 C 4.96094 21.3438 4 18.793 4 16 C 4 13.207 4.96094 10.6563 6.5625 8.625 Z M 27 7.375 L 25.4375 8.625 C 27.0391 10.6563 28 13.207 28 16 C 28 18.793 27.0391 21.3438 25.4375 23.375 L 27 24.625 C 28.8672 22.2539 30 19.25 30 16 C 30 12.75 28.8672 9.74609 27 7.375 Z M 16 8 C 20.4297 8 24 11.5703 24 16 C 24 20.4297 20.4297 24 16 24 C 11.5703 24 8 20.4297 8 16 C 8 11.5703 11.5703 8 16 8 Z M 15 10 L 15 19 L 17 19 L 17 10 Z M 15 20 L 15 22 L 17 22 L 17 20 Z&quot;; -fx-background-color: red;" AnchorPane.leftAnchor="16.0" />
+      <AnchorPane layoutX="12.0" layoutY="103.0" prefHeight="206.0" prefWidth="870.0" styleClass="box" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+         <children>
+            <GridPane layoutY="52.0" prefHeight="119.0" prefWidth="358.0" styleClass="content" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="48.8">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="417.6" minWidth="10.0" prefWidth="142.80001220703122" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="512.8" minWidth="0.0" prefWidth="343.59998779296876" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label styleClass="small" text="Mot de passe" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="47.0" styleClass="small" text="Pseudo">
+                     <GridPane.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <AnchorPane prefHeight="61.0" prefWidth="243.0" GridPane.columnIndex="1">
+                     <children>
+                        <Label fx:id="id3" layoutX="1.0" layoutY="53.00000000000001" prefHeight="18.0" prefWidth="185.0" style="-fx-padding: 0;" text="Veuillez entrer le pseudo d'admin" textFill="#9e9e9e" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="1.0">
+                           <font>
+                              <Font name="Nirmala UI" size="12.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane fx:id="erroricon3" layoutX="320.8" layoutY="56.400000000000006" prefHeight="12.0" prefWidth="10.0" style="-fx-shape: &quot;m 18.581 2.14 l -6.265 -2.089 a 1 1 0 0 0 -0.632 0 l -6.266 2.089 a 4.993 4.993 0 0 0 -3.418 4.743 v 5.117 c 0 7.563 9.2 11.74 9.594 11.914 a 1 1 0 0 0 0.812 0 c 0.394 -0.174 9.594 -4.351 9.594 -11.914 v -5.117 a 4.993 4.993 0 0 0 -3.419 -4.743 Z m -6.581 16.86 a 1 1 0 1 1 1 -1 a 1 1 0 0 1 -1 1 Z m 1 -5 a 1 1 0 0 1 -2 0 v -8 a 1 1 0 0 1 2 0 Z&quot;; -fx-background-color: red;" visible="false" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="12.0" />
+                        <TextField id="textbox" fx:id="admParam_pseudo" layoutX="-19.0" layoutY="-4.0" promptText="Pseudo" style="-fx-font-size: 13px;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="8.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="61.0" prefWidth="243.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Label fx:id="id4" layoutX="1.0" layoutY="53.00000000000001" prefHeight="18.0" prefWidth="214.0" style="-fx-padding: 0;" text="Veuillez entrer le Mot de passe d'admin" textFill="#9e9e9e" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="1.0">
+                           <font>
+                              <Font name="Nirmala UI" size="12.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane fx:id="erroricon4" layoutX="320.8" layoutY="55.400000000000006" prefHeight="12.0" prefWidth="10.0" style="-fx-shape: &quot;m 18.581 2.14 l -6.265 -2.089 a 1 1 0 0 0 -0.632 0 l -6.266 2.089 a 4.993 4.993 0 0 0 -3.418 4.743 v 5.117 c 0 7.563 9.2 11.74 9.594 11.914 a 1 1 0 0 0 0.812 0 c 0.394 -0.174 9.594 -4.351 9.594 -11.914 v -5.117 a 4.993 4.993 0 0 0 -3.419 -4.743 Z m -6.581 16.86 a 1 1 0 1 1 1 -1 a 1 1 0 0 1 -1 1 Z m 1 -5 a 1 1 0 0 1 -2 0 v -8 a 1 1 0 0 1 2 0 Z&quot;; -fx-background-color: red;" visible="false" AnchorPane.bottomAnchor="11.0" AnchorPane.rightAnchor="12.0" />
+                        <PasswordField id="textbox" fx:id="admParam_mdp" layoutX="-19.0" layoutY="-4.0" promptText="Mot de passe" style="-fx-font-size: 13px;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="8.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </GridPane>
+            <AnchorPane prefHeight="50.0" prefWidth="487.0" styleClass="title" AnchorPane.bottomAnchor="156.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="13.0" layoutY="12.0" styleClass="medium" text="Paramètres du compte admin" AnchorPane.leftAnchor="12.0" AnchorPane.topAnchor="12.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="12.0" layoutY="324.0" prefHeight="354.0" prefWidth="394.0" styleClass="box" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="490.0" AnchorPane.topAnchor="324.0">
+         <children>
+            <GridPane layoutX="4.0" layoutY="60.0" prefHeight="194.0" prefWidth="446.0" styleClass="content" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+               <columnConstraints>
+                  <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" maxWidth="217.20001220703125" minWidth="10.0" prefWidth="158.0" />
+                  <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" maxWidth="316.3999938964844" minWidth="10.0" prefWidth="286.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="82.8000244140625" minHeight="10.0" prefHeight="82.8000244140625" valignment="CENTER" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="67.60001220703126" minHeight="10.0" prefHeight="61.999975585937506" valignment="CENTER" vgrow="ALWAYS" />
+               </rowConstraints>
+               <children>
+                  <Label prefHeight="18.0" prefWidth="105.0" styleClass="small" text="Compte" />
+                  <AnchorPane prefHeight="61.0" prefWidth="243.0" GridPane.columnIndex="1">
+                     <children>
+                        <Label fx:id="id" layoutX="1.0" layoutY="50.00000000000001" prefHeight="18.0" prefWidth="185.0" style="-fx-padding: 0;" text="Veuillez entrer Compte de BD" textFill="#9e9e9e" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="1.0">
+                           <font>
+                              <Font name="Nirmala UI" size="12.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane fx:id="erroricon" prefHeight="12.0" prefWidth="10.0" style="-fx-shape: &quot;m 18.581 2.14 l -6.265 -2.089 a 1 1 0 0 0 -0.632 0 l -6.266 2.089 a 4.993 4.993 0 0 0 -3.418 4.743 v 5.117 c 0 7.563 9.2 11.74 9.594 11.914 a 1 1 0 0 0 0.812 0 c 0.394 -0.174 9.594 -4.351 9.594 -11.914 v -5.117 a 4.993 4.993 0 0 0 -3.419 -4.743 Z m -6.581 16.86 a 1 1 0 1 1 1 -1 a 1 1 0 0 1 -1 1 Z m 1 -5 a 1 1 0 0 1 -2 0 v -8 a 1 1 0 0 1 2 0 Z&quot;; -fx-background-color: red;" visible="false" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="12.0" />
+                        <TextField id="textbox" fx:id="mysqlParam_compte" layoutX="-19.0" layoutY="-4.0" promptText="Compte" style="-fx-font-size: 13px;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="8.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Label fx:id="id10" layoutX="1.0" layoutY="51.00000000000001" prefHeight="18.0" prefWidth="259.0" style="-fx-padding: 0;" text="Veuillez entrer Mot de passe de BD" textFill="#9e9e9e" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0">
+                           <font>
+                              <Font name="Nirmala UI" size="12.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane fx:id="erroricon10" prefHeight="12.0" prefWidth="10.0" style="-fx-shape: &quot;m 18.581 2.14 l -6.265 -2.089 a 1 1 0 0 0 -0.632 0 l -6.266 2.089 a 4.993 4.993 0 0 0 -3.418 4.743 v 5.117 c 0 7.563 9.2 11.74 9.594 11.914 a 1 1 0 0 0 0.812 0 c 0.394 -0.174 9.594 -4.351 9.594 -11.914 v -5.117 a 4.993 4.993 0 0 0 -3.419 -4.743 Z m -6.581 16.86 a 1 1 0 1 1 1 -1 a 1 1 0 0 1 -1 1 Z m 1 -5 a 1 1 0 0 1 -2 0 v -8 a 1 1 0 0 1 2 0 Z&quot;; -fx-background-color: red;" visible="false" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="12.0" />
+                        <PasswordField id="textbox" fx:id="mysqlParam_mdp" layoutX="-7.0" layoutY="7.0" prefHeight="43.0" prefWidth="250.0" promptText="Mot de passe" style="-fx-font-size: 13px;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="8.0" />
+                     </children>
+                  </AnchorPane>
+                  <Label prefHeight="26.0" prefWidth="131.0" styleClass="small" text="Mot de passe" GridPane.rowIndex="1" />
+                  <AnchorPane prefHeight="61.0" prefWidth="212.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <Label fx:id="id2" layoutX="1.0" layoutY="53.800000000000004" prefHeight="18.0" prefWidth="187.0" style="-fx-padding: 0;" text="Veuillez entrer le port" textFill="#9e9e9e" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="1.0">
+                           <font>
+                              <Font name="Nirmala UI" size="12.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane fx:id="erroricon2" layoutX="238.4" layoutY="55.2" prefHeight="12.0" prefWidth="10.0" style="-fx-shape: &quot;m 18.581 2.14 l -6.265 -2.089 a 1 1 0 0 0 -0.632 0 l -6.266 2.089 a 4.993 4.993 0 0 0 -3.418 4.743 v 5.117 c 0 7.563 9.2 11.74 9.594 11.914 a 1 1 0 0 0 0.812 0 c 0.394 -0.174 9.594 -4.351 9.594 -11.914 v -5.117 a 4.993 4.993 0 0 0 -3.419 -4.743 Z m -6.581 16.86 a 1 1 0 1 1 1 -1 a 1 1 0 0 1 -1 1 Z m 1 -5 a 1 1 0 0 1 -2 0 v -8 a 1 1 0 0 1 2 0 Z&quot;; -fx-background-color: red;" visible="false" AnchorPane.bottomAnchor="16.0" AnchorPane.rightAnchor="12.0" />
+                        <TextField id="textbox" fx:id="mysqlParam_port" layoutX="26.0" layoutY="10.0" promptText="Port" style="-fx-font-size: 13px;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="8.0" />
+                     </children>
+                  </AnchorPane>
+                  <Label styleClass="small" text="Port" GridPane.rowIndex="2" />
+                  <Label styleClass="small" text="Base Donnée" GridPane.rowIndex="3" />
+                  <AnchorPane prefHeight="68.0" prefWidth="259.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets right="10.0" />
+                     </GridPane.margin>
+                     <children>
+                        <TextField id="textbox" fx:id="mysqlParam_bd" prefHeight="43.0" prefWidth="250.0" promptText="Base donnée" style="-fx-font-size: 13px;" />
+                        <Label fx:id="id24" layoutX="3.0" layoutY="44.0" prefHeight="18.0" prefWidth="188.0" style="-fx-padding: 0;" text="Veuillez entrer la BD" textFill="#9e9e9e">
+                           <font>
+                              <Font name="Nirmala UI" size="12.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane fx:id="erroricon24" layoutX="238.0" layoutY="47.0" prefHeight="12.0" prefWidth="10.0" style="-fx-shape: &quot;m 18.581 2.14 l -6.265 -2.089 a 1 1 0 0 0 -0.632 0 l -6.266 2.089 a 4.993 4.993 0 0 0 -3.418 4.743 v 5.117 c 0 7.563 9.2 11.74 9.594 11.914 a 1 1 0 0 0 0.812 0 c 0.394 -0.174 9.594 -4.351 9.594 -11.914 v -5.117 a 4.993 4.993 0 0 0 -3.419 -4.743 Z m -6.581 16.86 a 1 1 0 1 1 1 -1 a 1 1 0 0 1 -1 1 Z m 1 -5 a 1 1 0 0 1 -2 0 v -8 a 1 1 0 0 1 2 0 Z&quot;; -fx-background-color: red;" visible="false" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </GridPane>
+            <AnchorPane prefHeight="60.0" prefWidth="446.0" styleClass="title" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="12.0" layoutY="16.0" styleClass="medium" text="Paramètres de la base de données">
+                     <font>
+                        <Font name="Segoe UI" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../FormStyle.css" />
+      <URL value="@../../../Styles.css" />
+   </stylesheets>
+</AnchorPane>

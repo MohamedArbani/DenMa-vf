@@ -1,0 +1,3 @@
+admin:mohamed:$2a$12$5AAn9xBNAatdM30j9UEZX.wzWfFLgEzzhrKF2rX/erJ2I.ehrQoau
+assistant:$2a$12$CrFu8SOVgToZKvwLL/mnS.W0KfcNayvNniVL7SLaChp8Ygt.DF2xG:37
+assistant2:$2a$12$/rvW5fiBjs49F3AljFCmR.zTHHBht0aTY4zf.cMTmswbt65rMBbf6:38

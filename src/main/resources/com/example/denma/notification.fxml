@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="72.0" prefWidth="247.0" styleClass="success" stylesheets="@../../../myAlert.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="18.0" prefHeight="34.0" prefWidth="35.0" styleClass="check" />
+      <Label fx:id="label" layoutX="59.0" layoutY="23.0" text="Uou have succed" textFill="WHITE">
+         <font>
+            <Font name="Nirmala UI Bold" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

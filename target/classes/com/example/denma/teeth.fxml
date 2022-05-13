@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="748.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.denma.Teeth">
+   <children>
+      <ImageView fitHeight="230.0" fitWidth="259.0" layoutX="480.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../teeth-set-bottom.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="230.0" fitWidth="269.0" layoutX="480.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../teeth-set-top.png" />
+         </image>
+      </ImageView>
+      <RadioButton fx:id="tooth1" layoutX="487.0" layoutY="221.0" mnemonicParsing="false" />
+      <RadioButton fx:id="tooth2" layoutX="487.0" layoutY="186.0" mnemonicParsing="false" />
+      <RadioButton fx:id="tooth3" layoutX="495.0" layoutY="146.0" mnemonicParsing="false" />
+      <RadioButton fx:id="tooth4" layoutX="503.0" layoutY="111.0" mnemonicParsing="false" />
+      <RadioButton fx:id="tooth5" layoutX="511.0" layoutY="80.0" mnemonicParsing="false" />
+      <RadioButton fx:id="tooth6" layoutX="527.0" layoutY="55.0" mnemonicParsing="false" />
+      <RadioButton fx:id="tooth7" layoutX="547.0" layoutY="40.0" mnemonicParsing="false" />
+      <RadioButton fx:id="tooth8" layoutX="586.0" layoutY="31.0" mnemonicParsing="false" />
+      <RadioButton fx:id="tooth9" layoutX="624.0" layoutY="31.0" mnemonicParsing="false" />
+      <RadioButton fx:id="tooth10" layoutX="656.0" layoutY="39.0" mnemonicParsing="false" />
+      <RadioButton fx:id="tooth11" layoutX="678.0" layoutY="55.0" mnemonicParsing="false" />
+      <RadioButton fx:id="tooth12" layoutX="694.0" layoutY="80.0" mnemonicParsing="false" />
+      <RadioButton fx:id="tooth13" layoutX="702.0" layoutY="111.0" mnemonicParsing="false" />
+      <RadioButton fx:id="tooth14" layoutX="716.0" layoutY="146.0" mnemonicParsing="false" />
+      <RadioButton fx:id="tooth15" layoutX="716.0" layoutY="186.0" mnemonicParsing="false" />
+      <RadioButton fx:id="tooth16" layoutX="718.0" layoutY="221.0" mnemonicParsing="false" />
+      <RadioButton fx:id="tooth17" layoutX="487.0" layoutY="309.0" mnemonicParsing="false" />
+      <RadioButton fx:id="tooth18" layoutX="487.0" layoutY="343.0" mnemonicParsing="false" />
+      <RadioButton fx:id="tooth19" layoutX="495.0" layoutY="387.0" mnemonicParsing="false" />
+      <RadioButton fx:id="tooth20" layoutX="511.0" layoutY="422.0" mnemonicParsing="false" />
+      <RadioButton fx:id="tooth21" layoutX="519.0" layoutY="448.0" mnemonicParsing="false" />
+      <RadioButton fx:id="tooth22" layoutX="539.0" layoutY="468.0" mnemonicParsing="false" />
+      <RadioButton fx:id="tooth23" layoutX="563.0" layoutY="484.0" mnemonicParsing="false" />
+      <RadioButton fx:id="tooth24" layoutX="594.0" layoutY="484.0" mnemonicParsing="false" />
+      <RadioButton fx:id="tooth25" layoutX="616.0" layoutY="484.0" mnemonicParsing="false" />
+      <RadioButton fx:id="tooth26" layoutX="640.0" layoutY="484.0" mnemonicParsing="false" />
+      <RadioButton fx:id="tooth27" layoutX="664.0" layoutY="476.0" mnemonicParsing="false" />
+      <RadioButton fx:id="tooth28" layoutX="686.0" layoutY="448.0" mnemonicParsing="false" />
+      <RadioButton fx:id="tooth29" layoutX="694.0" layoutY="422.0" mnemonicParsing="false" />
+      <RadioButton fx:id="tooth30" layoutX="702.0" layoutY="387.0" mnemonicParsing="false" />
+      <RadioButton fx:id="tooth31" layoutX="718.0" layoutY="351.0" mnemonicParsing="false" />
+      <RadioButton fx:id="tooth32" layoutX="718.0" layoutY="309.0" mnemonicParsing="false" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,64 @@
+.
+{
+    -fx-background-color: #FFF;
+}
+
+#tabPane
+{
+    -fx-tab-max-height: 5em;
+    -fx-tab-min-height: 5em;
+    -fx-tab-min-width: 1em;
+    -fx-tab-max-width: 1em;
+    -fx-padding: 0 -1 -1 0;
+}
+.tab .tab-label
+{
+    -fx-background-color: transparent;
+    -fx-alignment: center;
+}
+.tab
+{
+    -fx-background-color: #FFF;
+    -fx-background-insets: 0.0;
+    -fx-background-radius: 0.0;
+    -fx-padding: 0 30 0 30;
+}
+.tab:hover{
+    -fx-background-color: #F1F4FF;
+    -fx-border-width: 5 0 0 0;
+    -fx-border-color: #7aabff;
+}
+.tab:selected
+{
+    -fx-background-color: #BAE1F4;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-border-width: 5 0 0 0;
+    -fx-border-color: #4b63ff;
+}
+.tab:selected .focus-indicator
+{
+    -fx-focus-color:transparent;
+    -fx-border-color:transparent;
+}
+
+.tab-pane *.tab-header-background{
+    -fx-background-color:white;
+}
+.tab-pane:left *.tab-header-area{
+    -fx-background-insets:0, 0 0 10;
+    -fx-padding: 0;
+}
+#addPatient
+{
+    /*-fx-background-color: transparent;*/
+    -fx-border-color: transparent;
+}
+.table-row-cell {
+    -fx-cell-size: 40px;
+}
+.button:pressed {
+}
+.button:hover {
+}
+

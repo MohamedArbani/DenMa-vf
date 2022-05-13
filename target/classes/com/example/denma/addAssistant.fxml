@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchor" prefHeight="550.0" prefWidth="383.0" style="-fx-background-color: white;" stylesheets="@../../../Styles.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ScrollPane hbarPolicy="NEVER" prefHeight="550.0" prefWidth="379.0">
+         <content>
+            <AnchorPane prefHeight="879.0" prefWidth="378.0">
+               <children>
+                  <JFXButton fx:id="ajBu" layoutX="197.0" layoutY="828.8000000000001" prefHeight="44.0" prefWidth="90.0" styleClass="btns" text="Ajouter" AnchorPane.bottomAnchor="6.399999999999977" />
+                  <JFXButton fx:id="Annuler" layoutX="98.0" layoutY="828.8000000000001" prefHeight="44.0" prefWidth="90.0" styleClass="btnsAnnuler" text="Annuler" AnchorPane.bottomAnchor="6.399999999999977" />
+                  <Label layoutX="14.0" layoutY="17.0" prefHeight="28.0" prefWidth="303.0" style="-fx-font-size: 19px;" text="Entrer les informations de l'assistant">
+                     <font>
+                        <Font name="SansSerif" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="45.0" prefHeight="27.0" prefWidth="268.0" style="-fx-font-size: 12px;" text="Tous les champs doivent être remplies" textFill="#717171">
+                     <font>
+                        <Font name="Segoe UI" size="13.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="25.0" layoutY="86.0" prefHeight="73.0" prefWidth="334.0" style="-fx-background-radius: 20px; -fx-background-color: #FEF8EF;">
+                     <children>
+                        <Label layoutX="42.0" layoutY="7.0" prefHeight="57.0" prefWidth="274.0" style="-fx-font-size: 13px;" styleClass="h6" text="Noter qu'il faut remplir tous les champs. Il faut mentionner que le CIN peut se remplacer par une passport au cas des étrangers." textFill="#d88912" wrapText="true">
+                           <font>
+                              <Font name="SansSerif" size="13.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane layoutX="14.0" layoutY="27.0" prefHeight="17.0" prefWidth="17.0" style="-fx-shape: &quot;M 24 12 A 12 12 0 1 1 12 0 A 12.013 12.013 0 0 1 24 12 Z M 13 14.257 a 1.982 1.982 0 0 1 0.93 -1.752 A 4 4 0 1 0 8 9 h 2 a 2 2 0 0 1 2.371 -1.967 a 2.024 2.024 0 0 1 1.6 1.595 a 2 2 0 0 1 -1 2.125 A 3.954 3.954 0 0 0 11 14.257 V 15 h 2 Z M 13 17 H 11 v 2 h 2 Z&quot;; -fx-background-color: #D88912;" />
+                     </children>
+                  </AnchorPane>
+                  <VBox layoutX="28.0" layoutY="175.0" prefHeight="631.0" prefWidth="322.0" spacing="20.0">
+                     <children>
+                        <Label text="Nom*">
+                           <font>
+                              <Font name="Nirmala UI" size="17.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="-10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="nomc" onKeyTyped="#validate" prefHeight="25.0" prefWidth="214.0" />
+                        <Label text="Prénom*">
+                           <font>
+                              <Font name="Nirmala UI" size="17.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="-10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="prenomc" onKeyTyped="#validate" prefHeight="25.0" prefWidth="257.0" />
+                        <Label text="CIN*">
+                           <font>
+                              <Font name="Nirmala UI" size="17.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="-10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="cinc" onKeyTyped="#validate" prefHeight="25.0" prefWidth="366.0" />
+                        <Label text="Date de naissance*">
+                           <font>
+                              <Font name="Nirmala UI" size="17.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="-10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <DatePicker fx:id="datenaic" onKeyTyped="#validate" prefHeight="44.0" prefWidth="410.0" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="34.0" prefWidth="310.0" spacing="20.0">
+                           <children>
+                              <Label prefHeight="15.0" prefWidth="46.0" styleClass="h4" text="Sexe :">
+                                 <font>
+                                    <Font name="Segoe UI" size="17.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="3.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <JFXRadioButton id="radioh" fx:id="homme" contentDisplay="CENTER" selected="true" style="-fx-font-size: 17px;" styleClass="radio" text="Homme">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="sexe" />
+                                 </toggleGroup>
+                                 <selectedColor>
+                                    <Color red="0.24701754748821259" green="0.4847719371318817" blue="0.9263157844543457" />
+                                 </selectedColor>
+                                 <unSelectedColor>
+                                    <Color red="0.3499999940395355" green="0.3499999940395355" blue="0.3499999940395355" />
+                                 </unSelectedColor>
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </JFXRadioButton>
+                              <JFXRadioButton id="radiof" fx:id="femme" layoutX="79.0" layoutY="15.0" style="-fx-font-size: 17px;" styleClass="radio" text="Femme" toggleGroup="$sexe">
+                                 <selectedColor>
+                                    <Color red="0.9215686321258545" green="0.24705882370471954" blue="0.7882353067398071" />
+                                 </selectedColor>
+                                 <unSelectedColor>
+                                    <Color red="0.3499999940395355" green="0.3499999940395355" blue="0.3499999940395355" />
+                                 </unSelectedColor>
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </JFXRadioButton>
+                           </children>
+                           <padding>
+                              <Insets left="2.0" />
+                           </padding>
+                        </HBox>
+                        <Label text="User Name*">
+                           <font>
+                              <Font name="Nirmala UI" size="17.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="-10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="userName" onKeyTyped="#validate" />
+                        <Label text="Mot de passe">
+                           <font>
+                              <Font name="Nirmala UI" size="17.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="-10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <PasswordField fx:id="password" />
+                     </children>
+                  </VBox>
+                  <Label fx:id="errorlabel" layoutX="31.0" layoutY="257.0" prefHeight="18.0" prefWidth="281.0" style="-fx-font-size: 12px;" text="*Ce champ est obligatoire. Vous devez le renseigner" textFill="RED" visible="false" />
+                  <AnchorPane fx:id="erroricon" layoutX="338.0" layoutY="261.0" prefHeight="12.0" prefWidth="10.0" style="-fx-shape: &quot;m 18.581 2.14 l -6.265 -2.089 a 1 1 0 0 0 -0.632 0 l -6.266 2.089 a 4.993 4.993 0 0 0 -3.418 4.743 v 5.117 c 0 7.563 9.2 11.74 9.594 11.914 a 1 1 0 0 0 0.812 0 c 0.394 -0.174 9.594 -4.351 9.594 -11.914 v -5.117 a 4.993 4.993 0 0 0 -3.419 -4.743 Z m -6.581 16.86 a 1 1 0 1 1 1 -1 a 1 1 0 0 1 -1 1 Z m 1 -5 a 1 1 0 0 1 -2 0 v -8 a 1 1 0 0 1 2 0 Z&quot;; -fx-background-color: red;" visible="false" />
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,120 @@
+.parent{
+    -fx-font-family: "Segoe UI";
+
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 30px;
+    -fx-border-radius: 30px;
+}
+.sidebar{
+    -fx-background-color:#FFFFFF;
+    -fx-background-radius: 30px 30px 0px 0px ;
+}
+.sidebar_opt{
+    -fx-fill:#C1C1C1
+}
+.pane{
+    -fx-background-color:#FFFFFF;
+    -fx-background-radius: 0px 0px 30px 30px ;
+}
+.plus_btn{
+    -fx-background-color:Transparent;
+    -fx-background-radius: 5px ;
+    -fx-border-radius:5px;
+    -fx-border-color:#C1C1C1;
+    -fx-border-style:dashed;
+}
+.colored_card{
+    -fx-background-color: linear-gradient(to right, #1A3384,#2B49B3);
+    -fx-background-radius: 10px;
+}
+.btn{
+    -fx-font-size: 17px;
+    -fx-background-color:#2255F4;
+    -fx-background-radius: 10px ;
+    -fx-border-radius: 10px;
+    -fx-text-fill: white;
+    -fx-font-weight: 700;
+}
+.btn:hover{
+    -fx-background-color: #0028ff;
+    -fx-text-fill : #FFFFFF;
+}
+.btnGoogle{
+    -fx-background-radius: 15px;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-border-color: #EEEEEE;
+    -fx-border-radius: 15px;
+    -fx-text-fill: #4A4A5A;
+}
+.btnGoogle:hover{
+    -fx-border-color: #001725;
+}
+#btnFacebook{
+    -fx-background-color: #e9f0ff;
+}
+.mdbo{
+    -fx-background-color:Transparent;
+    -fx-text-fill : #0082ff;
+    -fx-font-weight: bold;
+    -fx-font-size: 11px;
+}
+.mdbo:hover{
+    -fx-text-fill : #0059ff;
+    -fx-underline: true;
+    -fx-font-size: 11px;
+}
+.close:hover {
+    -fx-opacity: 50%;
+}
+.minimize:hover{
+    -fx-opacity: 50%;
+}
+.form_field
+{
+    -fx-font-size: 15px;
+    -fx-prompt-text-fill: #747474;
+    -fx-background-color : transparent;
+    -fx-border-color: white white #EAEAEA white;
+    -fx-text-fill:#404040;
+
+}
+.form_field:focused  {
+    -fx-font-size: 15px;
+    -fx-border-color:white white #378EF0 white;
+    -fx-text-fill: #404040 ;
+}
+.btnClose{
+    -fx-background-color:Transparent;
+}
+.btnClose:hover{
+    -fx-background-color: red;
+
+}
+.icns:hover{
+    -fx-opacity: 1;
+}
+#btnTop{
+    -fx-border-color: Transparent;
+}
+#btnTopd{
+    -fx-text-fill: white;
+    -fx-border-color: Transparent;
+}
+.img{
+    -fx-background-image: url("Icones/img1.jpg");
+    -fx-shape:  "M254.038 110.603 252.238 313.799 332.294 367.367 334.051 164.18";
+}
+.img2{
+    -fx-background-image: url("Icones/img02.jpg");
+    -fx-shape:  "M254.038 110.603 252.238 313.799 332.294 367.367 334.051 164.18";
+}
+
+#errorField{
+    -fx-prompt-text-fill: #ff0000;
+    -fx-border-color: white white #ff2f2f white;
+}
+#validateField{
+    -fx-prompt-text-fill: #00C853;
+    -fx-border-color: white white #00C853 white;
+}
